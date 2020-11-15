@@ -10,6 +10,6 @@ class Dashboard extends CI_Controller
     }
     public function index()
     {
-        $this->template->display_admin('admin/view_dashboard.php');
+        $this->template->display_admin('view_dashboard.php');
     }
 }

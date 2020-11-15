@@ -24,16 +24,8 @@
     <!-- Custom styles for this page -->
     <link href="<?php echo base_url() . 'assets/'; ?>vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
-    <!-- swal -->
-	<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
-	<link rel="stylesheet" href="css/sweetalert2.min.css">
-	<!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
-	<link rel="stylesheet" href="css/animate.min.css">
-	<style type="text/css">
-		.btn {
-			width: 100%;
-		}
-	</style>
+    <!-- style.css -->
+    <link href="<?php echo base_url() . 'assets/'; ?>css/style.css" rel="stylesheet">
 
 
 <body id="page-top">

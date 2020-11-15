@@ -1,0 +1,95 @@
+/* Jumbotron */
+.jumbotron{
+    background-size: cover;
+    height: 360px;
+    text-align: center;
+    position: relative;
+}
+
+.jumbotron .container {
+    z-index: 1;
+    position: relative;
+}
+
+.jumbotron .carousel-inner{
+    margin-top: -8px;
+    height: 360px;
+}
+
+.jumbotron .carousel-item{
+    margin-top: -8px;
+    height: 360px;
+}
+
+.jumbotron .carousel-control-prev{
+    margin-top: -70px;
+    height: 360px;
+}
+.jumbotron .carousel-control-next{
+    margin-top: -70px;
+    height: 360px;
+}
+.jumbotron .carousel-indicators{
+    margin-top: auto;
+    height: 40px;
+}
+
+.jumbotron::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 80%;
+    background-image:linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+    position: absolute;
+    bottom: 0;
+}
+
+.jumbotron .display-4 {
+    color: white;
+    margin-top: 150px;
+    margin-bottom: 30px;
+    font-weight: 200;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    font-size: 40px;
+    z-index: 1;
+}
+
+.jumbotron .display-4 span {
+    font-weight: 500;
+}
+/* DEKSTOP Version */
+
+@media (min-width: 992px) {
+    .jumbotron{
+        margin-top: 0px;
+        height: 360px;
+    }
+
+    .jumbotron .carousel-inner{
+        margin-top: -8px;
+        height: 360px;
+    }
+
+    .jumbotron .carousel-item{
+        margin-top: -8px;
+        height: 360px;
+    }
+
+    .jumbotron .carousel-control-prev{
+        margin-top: -80px;
+        height: 360px;
+    }
+    .jumbotron .carousel-control-next{
+        margin-top: -80px;
+        height: 360px;
+    }
+    .jumbotron .carousel-indicators{
+        margin-top: 0px;
+        height: 70px;
+    }
+
+    .jumbotron .display-4{
+        margin-top: 100px;
+        font-size: 62px;
+    }
+}
