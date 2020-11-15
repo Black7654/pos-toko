@@ -27,8 +27,36 @@
  <!-- Nav Item - Pages Collapse Menu -->
  <li class="nav-item">
      <a class="nav-link" href="<?php echo base_url(); ?>toko">
-         <i class="fas fa-fw fa-user-circle"></i>
+         <i class="fas fa-fw fa-store"></i>
          <span>Toko</span></a>
+ </li>
+
+ <!-- Transaksi -->
+ <li class="nav-item">
+     <a class="nav-link" href="<?php echo base_url(); ?>transaksi">
+         <i class="fas fa-fw fa-sync-alt"></i>
+         <span>Transaksi</span></a>
+ </li>
+
+ <!-- Detail Transaksi -->
+ <li class="nav-item">
+     <a class="nav-link" href="<?php echo base_url(); ?>detailtransaksi">
+         <i class="fas fa-fw fa-th-list"></i>
+         <span>Detail Transaksi</span></a>
+ </li>
+
+ <!-- Kategori -->
+ <li class="nav-item">
+     <a class="nav-link" href="<?php echo base_url(); ?>kategori">
+         <i class="fas fa-fw fa-th-list"></i>
+         <span>Kategori</span></a>
+ </li>
+
+ <!-- Opname -->
+ <li class="nav-item">
+     <a class="nav-link" href="<?php echo base_url(); ?>kategori">
+         <i class="fas fa-fw fa-th-list"></i>
+         <span>Opname</span></a>
  </li>
 
  
