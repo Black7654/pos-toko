@@ -68,6 +68,28 @@
          <span>Barang</span></a>
  </li>
 
+ <!-- Rak -->
+ <li class="nav-item">
+     <a class="nav-link" href="<?php echo base_url(); ?>rak">
+         <i class="fas fa-fw fa-box"></i>
+         <span>Rak</span></a>
+ </li>
+
+ <!-- Satuan -->
+ <li class="nav-item">
+     <a class="nav-link" href="<?php echo base_url(); ?>satuan">
+         <i class="fas fa-fw fa-box"></i>
+         <span>Satuan</span></a>
+ </li>
+
+ <!-- Supplier -->
+ <li class="nav-item">
+     <a class="nav-link" href="<?php echo base_url(); ?>supplier">
+         <i class="fas fa-fw fa-box"></i>
+         <span>Supplier</span></a>
+ </li>
+
+
  <!-- Pengaturan -->
  <li class="nav-item">
      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
