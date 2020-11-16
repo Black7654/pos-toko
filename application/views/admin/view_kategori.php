@@ -52,6 +52,7 @@
         </div>
     </div>
 </div>
+</div>
 <!-- end tabel -->
 
 <!-- Modal -->
@@ -114,13 +115,53 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"><span class="fa fa-edit"></span>&nbsp&nbspEdit Data Admin</h5>
+                <h5 class="modal-title" id="exampleModalLabel"><span class="fa fa-edit"></span>&nbsp&nbspEdit Data Kategori</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body" id="edit_admin">
                 <!-- content modal -->
+
+                <form action="#" enctype="multipart/form-data" method="POST">
+                    <input type="hidden" class="form-control" id="id_admin" name="id_admin">
+                    
+                    <div class="container">
+                       
+                        <div class="form-group">
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <label for="exampleInputUsername1">ID Toko</label>
+                                    <input type="text" class="form-control" id="idToko" name="idToko" placeholder="ID Toko">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="exampleInputUsername1">ID Kategori</label>
+                                    <input type="text" class="form-control" id="idKat" name="idKat" placeholder="ID Kategori">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+
+                                <div class="col-md">
+                                    <label for="exampleInputUsername1">Nama</label>
+                                    <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama">
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- end content modal -->
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary"><span class="fa fa-save"></span>&nbspSimpan</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="fa fa-times"></span>&nbspClose</button>
+            </div>
+            </form>
 
             </div>
         </div>

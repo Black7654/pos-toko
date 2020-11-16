@@ -255,16 +255,168 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"><span class="fa fa-edit"></span>&nbsp&nbspEdit Data Admin</h5>
+                <h5 class="modal-title" id="exampleModalLabel"> <span class="fa fa-store"></span>&nbsp&nbspForm Edit Data Toko</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body" id="edit_admin">
+            <div class="modal-body">
                 <!-- content modal -->
+                <form action="#" enctype="multipart/form-data" method="POST">
+                    <input type="hidden" class="form-control" id="id_admin" name="id_admin">
+                    
+                    <div class="container">
+                       
+                        <div class="form-group">
+                            <div class="row">
 
+                                <div class="col-md-6">
+                                    <label for="exampleInputUsername1">ID</label>
+                                    <input type="text" class="form-control" id="id" name="id" placeholder="ID">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="exampleInputUsername1">ID Toko</label>
+                                    <input type="text" class="form-control" id="idToko" name="idToko" placeholder="ID Toko">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <label for="exampleInputUsername1">E-Mail</label>
+                                    <input type="text" class="form-control" id="email" name="email" placeholder="E-Mail">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="exampleInputUsername1">Password</label>
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+
+                                <div class="col-md">
+                                    <label for="exampleInputUsername1">Nama Toko</label>
+                                    <input type="text" class="form-control" id="nama_toko" name="nama_toko" placeholder="Nama Toko">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <label for="exampleInputUsername1">Pemilik</label>
+                                    <input type="text" class="form-control" id="pemilik" name="pemilik" placeholder="Pemilik">
+                                </div>
+
+                                <div class="col-md-6">
+                                <label for="exampleInputAktif1">Jenis Kelamin</label>
+                                <select class="form-control" name="gender" id="gender">
+                                    <option value="">--Pilih--</option>
+                                    <option value="L">Laki-Laki</option>
+                                    <option value="P">Perempuan</option>
+                                </select>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <label for="exampleInputUsername1">Tempat Lahir</label>
+                                    <input type="text" class="form-control" id="tmp_lahir" name="tmp_lahir" placeholder="Tempat Lahir">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="exampleInputUsername1">Tanggal Lahir</label>
+                                    <input type="date" class="form-control" id="tgl_lahir" name="tgl_lahir" placeholder="Tanggal Lahir">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+
+                                <div class="col-md">
+                                    <label for="exampleInputUsername1">No Telephone</label>
+                                    <input type="text" class="form-control" id="telp" name="telp" placeholder="No Telephone">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+
+                                <div class="col-md">
+                                    <label for="exampleInputUsername1">Alamat</label>
+                                    <textarea class="form-control" id="alamat" name="alamat" placeholder="Alamat"></textarea>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <label for="exampleInputUsername1">Kota/Kab</label>
+                                    <input type="text" class="form-control" id="kota_kab" name="kota_kab" placeholder="Kota/Kab">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="exampleInputUsername1">Provinsi</label>
+                                    <input type="text" class="form-control" id="provinsi" name="provinsi" placeholder="Provinsi">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+
+                                <div class="col-md" id="input_foto">
+                                    <label for="foto">Upload Foto</label>
+                                    <input type="file" class="form-control" name="foto" id="foto" accept="image/jpg, image/jpeg" placeholder="Upload Foto" required>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <label for="exampleInputUsername1">Tanggal registrasi</label>
+                                    <input type="date" class="form-control" id="reg_date" name="reg_date" placeholder="Tanggal Registrasi">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="exampleInputUsername1">Tanggal Experied</label>
+                                    <input type="date" class="form-control" id="experied" name="experied" placeholder="Experied">
+                                </div>
+
+                            </div>
+                        </div>          
+                    </div>
+                    <!-- end content modal -->
             </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary"><span class="fa fa-save"></span>&nbspSimpan</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="fa fa-times"></span>&nbspClose</button>
+            </div>
+            </form>
         </div>
     </div>
 </div>
-
