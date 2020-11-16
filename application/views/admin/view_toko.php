@@ -7,7 +7,7 @@
     <div class="card-header py-3">
         <h3 class="h4 mb-0 font-weight-bold text-primary">
             <span class="fa fa-file-alt"></span>&nbsp&nbspData Toko
-            <a href="#" type="button" class="btn btn-primary btn-icon-split float-right" data-toggle="modal" data-target="#exampleModal1">
+            <a href="#" type="button" class="btn btn-primary btn-icon-split float-right" data-toggle="modal" data-target=".bd-example-modal-xl">
                 <span class=" icon text-white-50">
                     <i class="fas fa-plus"></i>
                 </span>
@@ -45,33 +45,34 @@
                     // if (is_array($data)) {
                     //     $no = 0;
                     //     foreach ($data as $row) {
-                    //         $no++; ?>
-                            <tr>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center">
-                                    <a class="fa fa-edit" href="" data-toggle="modal" data-target="#exampleModal2"></a>
-                                    &nbsp||&nbsp
-                                    <a class="fa fa-trash" href="#" ></a>                              
-                                </td>
+                    //         $no++; 
+                    ?>
+                    <tr>
+                        <td class="text-center"></td>
+                        <td class="text-center"></td>
+                        <td class="text-center"></td>
+                        <td class="text-center"></td>
+                        <td class="text-center"></td>
+                        <td class="text-center"></td>
+                        <td class="text-center"></td>
+                        <td class="text-center"></td>
+                        <td class="text-center"></td>
+                        <td class="text-center"></td>
+                        <td class="text-center"></td>
+                        <td class="text-center"></td>
+                        <td class="text-center"></td>
+                        <td class="text-center"></td>
+                        <td class="text-center"></td>
+                        <td class="text-center"></td>
+                        <td class="text-center"></td>
+                        <td class="text-center">
+                            <a class="fa fa-edit" href="" data-toggle="modal" data-target="#exampleModal2"></a>
+                            &nbsp||&nbsp
+                            <a class="fa fa-trash" href="#"></a>
+                        </td>
 
-                            </tr>
-            
+                    </tr>
+
                 </tbody>
             </table>
         </div>
@@ -80,8 +81,8 @@
 <!-- end tabel -->
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+<div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel"> <span class="fa fa-store"></span>&nbsp&nbspForm Toko</h5>
@@ -93,9 +94,9 @@
                 <!-- content modal -->
                 <form action="#" enctype="multipart/form-data" method="POST">
                     <input type="hidden" class="form-control" id="id_admin" name="id_admin">
-                    
+
                     <div class="container">
-                       
+
                         <div class="form-group">
                             <div class="row">
 
@@ -147,12 +148,12 @@
                                 </div>
 
                                 <div class="col-md-6">
-                                <label for="exampleInputAktif1">Jenis Kelamin</label>
-                                <select class="form-control" name="gender" id="gender">
-                                    <option value="">--Pilih--</option>
-                                    <option value="L">Laki-Laki</option>
-                                    <option value="P">Perempuan</option>
-                                </select>
+                                    <label for="exampleInputAktif1">Jenis Kelamin</label>
+                                    <select class="form-control" name="gender" id="gender">
+                                        <option value="">--Pilih--</option>
+                                        <option value="L">Laki-Laki</option>
+                                        <option value="P">Perempuan</option>
+                                    </select>
                                 </div>
 
                             </div>
@@ -237,7 +238,7 @@
                                 </div>
 
                             </div>
-                        </div>          
+                        </div>
                     </div>
                     <!-- end content modal -->
             </div>
@@ -419,4 +420,8 @@
             </form>
         </div>
     </div>
+<<<<<<< HEAD
 </div>
+=======
+</div>
+>>>>>>> fccf0fa07c29fc59b037d431e64728258824445e
