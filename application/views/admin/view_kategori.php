@@ -52,7 +52,6 @@
         </div>
     </div>
 </div>
-</div>
 <!-- end tabel -->
 
 <!-- Modal -->
@@ -166,5 +165,4 @@
             </div>
         </div>
     </div>
-</div>
 

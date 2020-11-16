@@ -56,10 +56,9 @@
                             </tr>
             
                 </tbody>
-            </table>
+                </table>
         </div>
     </div>
-</div>
 </div>
 <!-- end tabel -->
 
@@ -240,5 +239,4 @@
             </div>
         </div>
     </div>
-</div>
 
