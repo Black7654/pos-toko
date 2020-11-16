@@ -8,8 +8,9 @@ class Kategori extends CI_Controller
         parent::__construct();
         // $this->load->model("Model_admin");
     }
+    
     public function index()
     {
-        $this->template->display_admin('view_kategori.php');
+        $this->template->display_admin('admin/view_kategori.php');
     }
 }

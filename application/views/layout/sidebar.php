@@ -48,13 +48,13 @@
  <!-- Kategori -->
  <li class="nav-item">
      <a class="nav-link" href="<?php echo base_url(); ?>kategori">
-         <i class="fas fa-fw fa-th-list"></i>
+         <i class="fas fa-fw fa-tags"></i>
          <span>Kategori</span></a>
  </li>
 
  <!-- Opname -->
  <li class="nav-item">
-     <a class="nav-link" href="<?php echo base_url(); ?>kategori">
+     <a class="nav-link" href="<?php echo base_url(); ?>opname">
          <i class="fas fa-fw fa-th-list"></i>
          <span>Opname</span></a>
  </li>
@@ -64,7 +64,7 @@
  <!-- Nilai -->
  <li class="nav-item">
      <a class="nav-link" href="<?php echo base_url(); ?>barang">
-         <i class="fas fa-fw fa-users"></i>
+         <i class="fas fa-fw fa-box"></i>
          <span>Barang</span></a>
  </li>
 

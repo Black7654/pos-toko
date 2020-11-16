@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <!-- Tittle Logo -->
-    <link rel="icon" type="image/png" href="assets/img/tittle/raport.png">
+    <link rel="icon" type="img/svg" href="assets/img/tittle/shop.png">
     <title>Welcome | Toko</title>
 
     <!-- Custom fonts for this template-->

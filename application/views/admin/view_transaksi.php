@@ -5,7 +5,7 @@
 <!-- ini tabel -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h3 class="m-0 font-weight-bold text-primary">
+        <h3 class="h4 mb-0 font-weight-bold text-primary">
             <span class="fa fa-file-alt"></span>&nbsp&nbspData Transaksi
             <a href="#" type="button" class="btn btn-primary btn-icon-split float-right" data-toggle="modal" data-target="#exampleModal1">
                 <span class=" icon text-white-50">

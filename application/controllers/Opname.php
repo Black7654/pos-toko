@@ -10,6 +10,6 @@ class Opname extends CI_Controller
     }
     public function index()
     {
-        $this->template->display_admin('view_opname.php');
+        $this->template->display_admin('admin/view_opname.php');
     }
 }

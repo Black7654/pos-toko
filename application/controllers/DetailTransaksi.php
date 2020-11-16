@@ -10,6 +10,6 @@ class DetailTransaksi extends CI_Controller
     }
     public function index()
     {
-        $this->template->display_admin('view_detailtransaksi.php');
+        $this->template->display_admin('admin/view_detailtransaksi.php');
     }
 }
