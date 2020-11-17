@@ -71,21 +71,21 @@
  <!-- Rak -->
  <li class="nav-item">
      <a class="nav-link" href="<?php echo base_url(); ?>rak">
-         <i class="fas fa-fw fa-box"></i>
+         <i class="fas fa-fw fa-border-all"></i>
          <span>Rak</span></a>
  </li>
 
  <!-- Satuan -->
  <li class="nav-item">
      <a class="nav-link" href="<?php echo base_url(); ?>satuan">
-         <i class="fas fa-fw fa-box"></i>
+         <i class="fas fa-fw fa-cube"></i>
          <span>Satuan</span></a>
  </li>
 
  <!-- Supplier -->
  <li class="nav-item">
      <a class="nav-link" href="<?php echo base_url(); ?>supplier">
-         <i class="fas fa-fw fa-box"></i>
+         <i class="fas fa-fw fa-users"></i>
          <span>Supplier</span></a>
  </li>
 

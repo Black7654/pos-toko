@@ -1,5 +1,5 @@
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800"><span class="fas fa-fw fa-store"></span>&nbspSupplier</h1>
+    <h1 class="h3 mb-0 text-gray-800"><span class="fas fa-fw fa-users"></span>&nbspSupplier</h1>
 </div>
 
 <!-- ini tabel -->
@@ -66,7 +66,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"> <span class="fa fa-store"></span>&nbsp&nbspForm Supplier</h5>
+                <h5 class="modal-title" id="exampleModalLabel"> <span class="fa fa-users"></span>&nbsp&nbspForm Supplier</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -127,7 +127,8 @@
 
                         <!-- Keaktifan Supplier -->
                         <div class="form-group">
-                                <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md">
                                 <label for="exampleInputAktif1">Status</label>
                                 <select class="form-control" name="status" id="status">
                                     <option value="">--Pilih--</option>
@@ -135,6 +136,7 @@
                                     <option value="T">Tidak Aktif</option>
                                 </select>
                                 </div>
+                            </div>
                         </div>
 
                         <div class="form-group">
