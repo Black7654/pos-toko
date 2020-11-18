@@ -5,9 +5,9 @@
 <!-- ini tabel -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h3 class="h4 mb-0 font-weight-bold text-primary">
+        <h3 class="h4 mb-0 font-weight-bold text-success">
             <span class="fa fa-file-alt"></span>&nbsp&nbspData Supplier
-            <a href="#" type="button" class="btn btn-primary btn-icon-split float-right" data-toggle="modal" data-target="#exampleModal1">
+            <a href="#" type="button" class="btn btn-success btn-icon-split float-right" data-toggle="modal" data-target="#exampleModal1">
                 <span class=" icon text-white-50">
                     <i class="fas fa-plus"></i>
                 </span>
@@ -158,7 +158,7 @@
                     <!-- end content modal -->
             </div>
             <div class="modal-footer">
-                <button type="submit" class="btn btn-primary"><span class="fa fa-save"></span>&nbspSimpan</button>
+                <button type="submit" class="btn btn-success"><span class="fa fa-save"></span>&nbspSimpan</button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="fa fa-times"></span>&nbspClose</button>
             </div>
             </form>

@@ -34,7 +34,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion " id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion " id="accordionSidebar">
 
             <?php echo $_sidebar; ?>
 
@@ -99,7 +99,7 @@
                 <div class="modal-body">Anda Akan Keluar dari Halaman Ini....???</div>
                 <div class="modal-footer">
                     <button class="btn btn-danger" type="button" data-dismiss="modal"><span class="fa fa-times"></span>&nbspCancel</button>
-                    <a class="btn btn-primary" href="login.html"><span class="fa fa-sign-out-alt"></span>&nbspLogout</a>
+                    <a class="btn btn-success" href="login.html"><span class="fa fa-sign-out-alt"></span>&nbspLogout</a>
                 </div>
             </div>
         </div>

@@ -6,7 +6,7 @@
 <div class="card shadow mb-4">
 
     <div class="card-header py-3">
-        <h3 class="m-0 font-weight-bold text-primary">
+        <h3 class="m-0 font-weight-bold text-success">
             <span class="fa fa-user-circle"></span>&nbsp&nbspProfile
         </h3>
     </div>
@@ -64,7 +64,7 @@
             </div>
         </div>
         <div class="card-footer float-right">
-                <button type="submit" class="btn btn-primary"><span class="fa fa-save"></span>&nbspSimpan</button>
+                <button type="submit" class="btn btn-success"><span class="fa fa-save"></span>&nbspSimpan</button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="fa fa-times"></span>&nbspClose</button>
             </div>
     </form>
