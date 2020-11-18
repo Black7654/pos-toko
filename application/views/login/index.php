@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<!-- Tittle Logo -->
-    <link rel="icon" type="img/svg" href="assets/img/tittle/shop.png">
-    <title>POS KITA</title>
+	<link rel="icon" type="img/svg" href="assets/img/tittle/shop.png">
+	<title>POS KITA</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 
 <!-- Css -->
 <link type="text/css" rel="stylesheet" href="<?php echo base_url() . 'assets/'; ?>css/style.css">    
 <!-- Font awesome -->
 <link href="<?php echo base_url() . 'assets/'; ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+
+<link type="text/css" rel="stylesheet" href="<?php echo base_url() . 'assets/'; ?>css/style.css">
+<style>
+	.fontsize {
+		font-size: 1.9rem !important;
+
+	}
+</style>
 
 
 <body>
@@ -20,7 +31,7 @@
 			<img src="<?php echo base_url() . 'assets/'; ?>img/shop.svg">
 		</div>
 		<div class="login-content">
-        <form action="<?php echo base_url(); ?>dashboard" enctype="multipart/form-data" method="POST">
+			<form action="<?php echo base_url(); ?>dashboard" enctype="multipart/form-data" method="POST">
 				<img src="<?php echo base_url() . 'assets/'; ?>img/avatar.svg">
 				<h4 class="head">SELAMAT DATANG DI APLIKASI</h4>
 				<h2 class="title">POS-KITA</h2>
@@ -49,4 +60,5 @@
     </div>
     <script type="text/javascript" src="<?php echo base_url() . 'assets/'; ?>js/main.js"></script>
 </body>
+
 </html>
