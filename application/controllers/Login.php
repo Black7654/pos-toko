@@ -11,6 +11,6 @@ class Login extends CI_Controller
     
     public function index()
     {
-        $this->template->display_admin('login/view_login.php');
+        $this->load->view('login/index.php');
     }
 }
