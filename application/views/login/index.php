@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Animated Login Form</title>
+	<!-- Tittle Logo -->
+    <link rel="icon" type="img/svg" href="assets/img/tittle/shop.png">
+    <title>POS KITA</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -11,12 +13,12 @@
 	<img class="wave" src="<?php echo base_url() . 'assets/'; ?>img/wave.png">
 	<div class="container">
 		<div class="img">
-			<img src="<?php echo base_url() . 'assets/'; ?>img/bg.svg">
+			<img src="<?php echo base_url() . 'assets/'; ?>img/shop.svg">
 		</div>
 		<div class="login-content">
-        <form action="<?php echo base_url(); ?>dashboard/" enctype="multipart/form-data" method="POST">
+        <form action="<?php echo base_url(); ?>dashboard" enctype="multipart/form-data" method="POST">
 				<img src="<?php echo base_url() . 'assets/'; ?>img/avatar.svg">
-				<h2 class="title">Welcome</h2>
+				<h2 class="title">Selamat Datang</h2>
            		<div class="input-div one">
            		   <div class="i">
            		   		<i class="fas fa-user"></i>

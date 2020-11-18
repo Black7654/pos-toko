@@ -201,3 +201,137 @@
      </div>
  </div>
 <!-- End Modal 1 -->
+
+<!-- Modal 2-->
+<div class="modal fade bd-example-modal-xl" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+     <div class="modal-dialog modal-xl">
+         <div class="modal-content">
+             <div class="modal-content">
+                 <div class="modal-header">
+                     <h5 class="modal-title" id="exampleModalLabel"><span class="fa fa-edit"></span>&nbsp&nbspEdit Data Opname</h5>
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                         <span aria-hidden="true">&times;</span>
+                     </button>
+                 </div>
+                 <div class="modal-body" id="edit_admin">
+                     <!-- content modal -->
+
+                     <form action="#" enctype="multipart/form-data" method="POST">
+                    <input type="hidden" class="form-control" id="id_admin" name="id_admin">
+                    
+                    <div class="container">
+                       
+                        <div class="form-group">
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <label for="exampleInputUsername1">ID</label>
+                                    <input type="text" class="form-control" id="id" name="id" placeholder="ID">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="exampleInputUsername1">ID Toko</label>
+                                    <input type="text" class="form-control" id="id_toko" name="id_toko" placeholder="ID Toko">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+
+                                <div class="col-md-4">
+                                    <label for="exampleInputUsername1">Kode Barang</label>
+                                    <input type="text" class="form-control" id="kode_barang" name="kode_barang" placeholder="Kode Barang ">
+                                </div>
+
+                                <div class="col-md-8">
+                                    <label for="exampleInputUsername1">Nama Barang</label>
+                                    <input type="text" class="form-control" id="nama_barang" name="nama_barang" placeholder="Nama Barang">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+
+                            <div class="col-md-6">
+                                <div class="md-form md-outline input-with-post-icon timepicker" twelvehour="true">
+                                <label for="exampleInputUsername1">ID Suplier</label>
+                                <input type="number" id="idSup" name="idSup" class="form-control" placeholder="ID Supier">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="md-form md-outline input-with-post-icon timepicker" twelvehour="true">
+                                <label for="exampleInputUsername1">ID Rak</label>
+                                <input type="number" id="idRak" name="idRak" class="form-control" placeholder="ID Rak">
+                                </div>
+                            </div>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+
+                                <div class="col-md">
+                                    <label for="exampleInputUsername1">Tanggal Barang</label>
+                                    <input type="date" class="form-control" id="tgl" name="tgl" placeholder="Tanggal Barang">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+
+                            <div class="col-md-6">
+                                <div class="md-form md-outline input-with-post-icon timepicker" twelvehour="true">
+                                <label for="exampleInputUsername1">Stock Toko</label>
+                                <input type="number" id="stok_toko" name="stok_toko" class="form-control" placeholder="Stock Toko">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="md-form md-outline input-with-post-icon timepicker" twelvehour="true">
+                                <label for="exampleInputUsername1">Stock Gudang</label>
+                                <input type="number" id="stok_gudang" name="stok_gudang" class="form-control" placeholder="Stock Gudang">
+                                </div>
+                            </div>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+
+                            <div class="col-md-6">
+                                <div class="md-form md-outline input-with-post-icon timepicker" twelvehour="true">
+                                <label for="exampleInputUsername1">Stock</label>
+                                <input type="number" id="stok" name="stok" class="form-control" placeholder="Stock">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="md-form md-outline input-with-post-icon timepicker" twelvehour="true">
+                                <label for="exampleInputUsername1">ID User</label>
+                                <input type="number" id="idUser" name="idUser" class="form-control" placeholder="ID User">
+                                </div>
+                            </div>
+
+                            </div>
+                        </div>
+
+                </div>
+                    <!-- end content modal -->
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success"><span class="fa fa-save"></span>&nbspSimpan</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="fa fa-times"></span>&nbspClose</button>
+                </div>
+            </div>
+            </form>
+             </div>
+         </div>
+     </div>
+    <!-- End Modal 2 -->
