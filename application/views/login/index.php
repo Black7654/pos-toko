@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Animated Login Form</title>
+	<!-- Tittle Logo -->
+    <link rel="icon" type="img/svg" href="assets/img/tittle/shop.png">
+    <title>POS KITA</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
