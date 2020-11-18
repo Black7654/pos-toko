@@ -7,7 +7,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
+<!-- Css -->
 <link type="text/css" rel="stylesheet" href="<?php echo base_url() . 'assets/'; ?>css/style.css">    
+<!-- Font awesome -->
+<link href="<?php echo base_url() . 'assets/'; ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
 
 <body>
 	<img class="wave" src="<?php echo base_url() . 'assets/'; ?>img/wave.png">
@@ -18,7 +22,8 @@
 		<div class="login-content">
         <form action="<?php echo base_url(); ?>dashboard" enctype="multipart/form-data" method="POST">
 				<img src="<?php echo base_url() . 'assets/'; ?>img/avatar.svg">
-				<h2 class="title">Selamat Datang</h2>
+				<h4 class="head">SELAMAT DATANG DI APLIKASI</h4>
+				<h2 class="title">POS-KITA</h2>
            		<div class="input-div one">
            		   <div class="i">
            		   		<i class="fas fa-user"></i>
@@ -37,8 +42,8 @@
            		    	<input type="password" class="input">
             	   </div>
             	</div>
-            	<a href="#">Forgot Password?</a>
-            	<input type="submit" class="btn" value="Login">
+            	
+            	<button type="submit" class="btn btn-success">Login</button>
             </form>
         </div>
     </div>

@@ -54,8 +54,17 @@ form{
 .login-content h2{
 	margin: 15px 0;
 	color: #333;
+	text-shadow: 3px 2px 3px rgba(163, 160, 160, 0.795);        
 	text-transform: uppercase;
 	font-size: 2.9rem;
+}
+
+.head{
+	font-family:arial;
+	font-size: 18px;
+	text-align: center;
+	color: rgba(190, 173, 173, 0.582);
+	margin-top: 20px;
 }
 
 .login-content .input-div{
@@ -186,6 +195,15 @@ a:hover{
 	.container{
 		grid-gap: 5rem;
 	}
+
+	.head{
+		font-family:arial;
+		font-size: 18px;
+		text-align: center;
+		color: grey;
+		margin-top: 20px;
+	}
+	
 }
 
 @media screen and (max-width: 1000px){
@@ -194,8 +212,9 @@ a:hover{
 	}
 
 	.login-content h2{
-        font-size: 2.4rem;
-        margin: 8px 0;
+		font-size: 2.4rem;
+		text-shadow: 3px 2px 3px rgba(163, 160, 160, 0.795);        
+		margin: 12px 0;
 	}
 
 	.img img{
