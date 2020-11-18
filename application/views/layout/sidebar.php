@@ -89,21 +89,6 @@
          <span>Supplier</span></a>
  </li>
 
-
- <!-- Pengaturan -->
- <li class="nav-item">
-     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-         <i class="fas fa-fw fa-cog"></i>
-         <span>Pengaturan</span>
-     </a>
-     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-         <div class="bg-white py-2 collapse-inner rounded">
-             <h6 class="collapse-header">list:</h6>
-             <a class="collapse-item" href=""><span class="fa fa-user-circle"></span>&nbsp&nbspProfile</a>
-         </div>
-     </div>
- </li>
- <!-- End pengaturan -->
  
  <!-- Divider -->
  <hr class="sidebar-divider d-none d-md-block">
