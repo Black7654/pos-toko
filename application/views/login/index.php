@@ -25,7 +25,7 @@
 		<div class="login-content">
 			<form action="<?php echo base_url(); ?>dashboard" enctype="multipart/form-data" method="POST">
 				<img src="<?php echo base_url() . 'assets/'; ?>img/avatar.svg">
-				<h2 class="title fontsize">Selamat Datang</h2>
+				<h2 class="title fontsize">Selamat Datang di Pos Kita</h2>
 				<div class="input-div one">
 					<div class="i">
 						<i class="fas fa-user"></i>
