@@ -54,9 +54,9 @@
 <!-- end tabel rak -->
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
+<div class="modal fade bd-example-modal-xl" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+     <div class="modal-dialog modal-xl">
+         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel"> <span class="fa fa-cube"></span>&nbsp&nbspForm Satuan</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -139,21 +139,90 @@
     </div>
 </div>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"><span class="fa fa-edit"></span>&nbsp&nbspEdit Data Admin</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body" id="edit_admin">
-                <!-- content modal -->
+<!-- Modal 2-->
+<div class="modal fade bd-example-modal-xl" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+     <div class="modal-dialog modal-xl">
+         <div class="modal-content">
+                 <div class="modal-header">
+                     <h5 class="modal-title" id="exampleModalLabel"><span class="fa fa-edit"></span>&nbsp&nbspEdit Data Satuan</h5>
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                         <span aria-hidden="true">&times;</span>
+                     </button>
+                 </div>
+                 <div class="modal-body" id="edit_admin">
+                     <!-- content modal -->
+                     <form action="#" enctype="multipart/form-data" method="POST">
+                    <input type="hidden" class="form-control" id="id_admin" name="id_admin">
+                    
+                    <div class="container">
+                       
+                        <div class="form-group">
+                            <div class="row">
 
-            </div>
-        </div>
-    </div>
-</div>
+                                <div class="col-md-6">
+                                    <label for="exampleInputUsername1">ID</label>
+                                    <input type="text" class="form-control" id="id" name="id" placeholder="ID">
+                                </div>
 
+                                <div class="col-md-6">
+                                    <label for="exampleInputUsername1">ID Satuan</label>
+                                    <input type="text" class="form-control" id="id_satuan" name="idSatuan" placeholder="ID Satuan">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+
+                                <div class="col-md">
+                                    <label for="exampleInputUsername1">Nama Satuan</label>
+                                    <input type="text" class="form-control" id="nama_satuan" name="nama_satuan" placeholder="Nama Satuan">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Keaktifan Satuan -->
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md">
+                                <label for="exampleInputAktif1">Status</label> 
+                                <select class="form-control" name="status" id="status">
+                                    <option value="">--Pilih--</option>
+                                    <option value="A">Aktif</option>
+                                    <option value="T">Tidak Aktif</option>
+                                </select>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <label for="exampleInputUsername1">Tanggal registrasi</label>
+                                    <input type="date" class="form-control" id="reg_date" name="reg_date" placeholder="Tanggal Registrasi">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="exampleInputUsername1">Tanggal Experied</label>
+                                    <input type="date" class="form-control" id="experied" name="experied" placeholder="Experied">
+                                </div>
+
+                            </div>
+                        </div>          
+                    </div>
+                    <!-- end content modal -->
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-success"><span class="fa fa-save"></span>&nbspSimpan</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="fa fa-times"></span>&nbspClose</button>
+            </div>
+            </form>
+                     
+             </div>
+         </div>
+     </div>
+    <!-- End Modal 2 -->

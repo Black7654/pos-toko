@@ -150,3 +150,93 @@
      </div>
  </div>
 <!-- End Modal -->
+
+<!-- Modal 2-->
+<div class="modal fade bd-example-modal-xl" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+     <div class="modal-dialog modal-xl">
+         <div class="modal-content">
+             <div class="modal-content">
+                 <div class="modal-header">
+                     <h5 class="modal-title" id="exampleModalLabel"><span class="fa fa-edit"></span>&nbsp&nbspEdit Data Transaksi</h5>
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                         <span aria-hidden="true">&times;</span>
+                     </button>
+                 </div>
+                 <div class="modal-body" id="edit_admin">
+                     <!-- content modal -->
+
+                     <form action="#" enctype="multipart/form-data" method="POST">
+                    <input type="hidden" class="form-control" id="id_admin" name="id_admin">
+                    
+                    <div class="container">
+                       
+                        <div class="form-group">
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <label for="exampleInputUsername1">ID Toko</label>
+                                    <input type="text" class="form-control" id="idToko" name="idToko" placeholder="ID Toko">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="exampleInputUsername1">ID Transaksi</label>
+                                    <input type="text" class="form-control" id="id_transaksi" name="id_transaksi" placeholder="ID Toko">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <label for="exampleInputUsername1">ID User</label>
+                                    <input type="text" class="form-control" id="id_user" name="id_user" placeholder="E-Mail">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="exampleInputUsername1">Tanggal Transaksi</label>
+                                    <input type="date" class="form-control" id="tanggal" name="tanggal" placeholder="Password">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+
+                            <div class="col-md">
+                                <div class="md-form md-outline input-with-post-icon timepicker" twelvehour="true">
+                                <label for="exampleInputUsername1">Waktu Transaksi</label>
+                                <input type="time" id="light-version-examples" class="form-control" placeholder="Select time">
+                                </div>
+                            </div>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <label for="exampleInputUsername1">Diskon</label>
+                                    <input type="text" class="form-control" id="diskon" name="diskon" placeholder="Diskon">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="exampleInputUsername1">Valid</label>
+                                    <input type="text" class="form-control" id="valid" name="valid" placeholder="Valid">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end content modal -->
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-success"><span class="fa fa-save"></span>&nbspSimpan</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="fa fa-times"></span>&nbspClose</button>
+            </div>
+            </form>
+             </div>
+         </div>
+     </div>
