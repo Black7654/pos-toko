@@ -44,7 +44,7 @@
 						<input type="password" class="input">
 					</div>
 				</div>
-				<a href="#">Forgot Password?</a>
+				<!-- <a href="#">Forgot Password?</a> -->
 				<input type="submit" class="btn" value="Login">
 			</form>
 		</div>
