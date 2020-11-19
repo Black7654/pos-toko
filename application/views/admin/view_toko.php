@@ -36,6 +36,8 @@
                         <th class="text-center">Kota/Kab</th>
                         <th class="text-center">Provinsi</th>
                         <th class="text-center">Foto Profile</th>
+                        <th class="text-center">Tanggal Registrasi</th>
+                        <th class="text-center">Tanggal Kadaluarsa</th>
                         <th class="text-center">Action</th>
                     </tr>
                 </thead>
@@ -61,11 +63,14 @@
                                 <td class="text-center"><?php echo $row->no_ktp; ?></td>
                                 <td class="text-center"><?php echo $row->kota_kab; ?></td>
                                 <td class="text-center"><?php echo $row->provinsi; ?></td>
-                                <td class="text-center"><?php echo $row->foto_profil; ?></td>
+                                <td class="text-center"><img src="<?php echo base_url().'assets/image-profile/'.$row->foto_profil;?>" width="80px" height="60px"></td>
+                                <td class="text-center"><?php echo $row->reg_date; ?></td>
+                                <td class="text-center"><?php echo $row->exp_date; ?></td>
                                 <td class="text-center">
+
                                     <a class="fa fa-edit" href="" data-toggle="modal" data-target="#exampleModal2" onclick="edit('<?php echo $row->id; ?>')"></a>
                                     &nbsp||&nbsp
-                                    <a class="fa fa-trash" href="<?php echo base_url(); ?>toko/delete/<?php echo $row->id; ?>" ></a>
+                                    <a class="fa fa-trash" href="<?php echo base_url(); ?>toko/delete/<?php echo $row->idToko; ?>"></a>
                                                          
                                 </td>
 
@@ -196,12 +201,12 @@
                     <div class="row">
                     <div class="col-md-6">
                         <label for="exampleInputPassword1">Tanggal Registrasi</label>
-                        <input type="text" class="form-control" id="reg_date" name="reg_date" placeholder="Masukkan Tanggal Registrasi">
+                        <input type="date" class="form-control" id="reg_date" name="reg_date" placeholder="Masukkan Tanggal Registrasi">
                     </div>
 
                     <div class="col-md-6">
                         <label for="exampleInputPassword1">Tanggal Kadaluarsa</label>
-                        <input type="text" class="form-control" id="exp_date" name="exp_date" placeholder="Masukkan Tanggal Kadaluarsa">
+                        <input type="date" class="form-control" id="exp_date" name="exp_date" placeholder="Masukkan Tanggal Kadaluarsa">
                     </div>
                     </div>
                     </div>
@@ -224,7 +229,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"><span class="fa fa-edit"></span>&nbsp&nbspEdit Data Admin</h5>
+                <h5 class="modal-title" id="exampleModalLabel"><span class="fa fa-edit"></span>&nbsp&nbspEdit Data Toko</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -236,28 +241,18 @@
         </div>
     </div>
 </div>
+
 <script type="text/javascript">
-    // function edit(id) {
-    //     var id = id;
-    //     $.ajax({
-    //         type: 'POST',
-    //         data: 'id=' + id,
-    //         url: '<?php echo base_url(); ?>admin/edit',
-    //         success: function(data) {
-    //             $('#edit_admin').html(data);
-    //         }
-    //     });
-    // }
-
-    $(document).ready(function(){
-		    $("#basic").click(function(){
-		    	Swal.fire(
-				  'Ini adalah judulnya',
-				  'Ini adalah teksnya',
-				  'success'
-				);
-            });
-    });
-
+    function edit(id) {
+        var id = id;
+        $.ajax({
+            type: 'POST',
+            data: 'id=' + id,
+            url: '<?php echo base_url(); ?>toko/edit/',
+            success: function(data) {
+                $('#edit_admin').html(data);
+            }
+        });
+    }
 </script>
 
