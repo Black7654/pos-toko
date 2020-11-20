@@ -193,7 +193,7 @@
 
                     <div class="col-md-6">
                         <label for="exampleInputPassword1">Foto Profile</label>
-                        <input type="text" class="form-control" id="foto_profil" name="foto_profil" placeholder="Masukkan Foto Profile">
+                        <input type="file" class="form-control" id="foto_profil" name="foto_profil" placeholder="Masukkan Foto Profile">
                     </div>
                     </div>
                     </div>

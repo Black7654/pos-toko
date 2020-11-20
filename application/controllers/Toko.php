@@ -18,7 +18,7 @@ class Toko extends CI_Controller
     public function simpan()
     {
         $id = 'CLS' . random_string('numeric', 12); //name=""
-        $idtoko = 'CLS' . random_string('numeric', 12);
+        $idToko = $this->input->post('idToko');
         $email = $this->input->post('email');
         $password = $this->input->post('password');
         $nama_toko = $this->input->post('nama_toko');
@@ -37,7 +37,7 @@ class Toko extends CI_Controller
 
         $data = array(
             'id' => $id, //database
-            'idtoko' => $idtoko,
+            'idToko' => $idToko,
             'email' => $email,
             'password' => $password,
             'nama_toko' => $nama_toko,
@@ -118,7 +118,7 @@ class Toko extends CI_Controller
         <input type="hidden" class="form-control" id="id_admin" name="id_admin" value=' . $result->id . '>
 
                         <div class="col-md">
-                            <input type="hidden" class="form-control" id="idtoko" name="idtoko" value='. $result->idToko .'>
+                            <input type="hidden" class="form-control" id="idToko" name="idToko" value='. $result->idToko .'>
                         </div>
                 <div class="form-group">
                     <div class="row">
