@@ -21,7 +21,7 @@
 
     <!-- Custom styles for this template-->
     <link href="<?php echo base_url() . 'assets/'; ?>css/sb-admin-2.min.css" rel="stylesheet">
-    
+
     <!-- Custom styles for this page -->
     <link href="<?php echo base_url() . 'assets/'; ?>vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
@@ -96,7 +96,7 @@
                 <div class="modal-body">Anda Akan Keluar dari Halaman Ini....???</div>
                 <div class="modal-footer">
                     <button class="btn btn-danger" type="button" data-dismiss="modal"><span class="fa fa-times"></span>&nbspCancel</button>
-                    <a class="btn btn-success" href="<?php echo base_url();?>login"><span class="fa fa-sign-out-alt"></span>&nbspLogout</a>
+                    <a class="btn btn-success" href="<?php echo base_url(); ?>login"><span class="fa fa-sign-out-alt"></span>&nbspLogout</a>
                 </div>
             </div>
         </div>
@@ -127,6 +127,7 @@
 
     <!-- Sweet Alert -->
     <script src="<?php echo base_url() . 'assets/'; ?>css/sweetalert2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>@endsection
 
 </body>
 
