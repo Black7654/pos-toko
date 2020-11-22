@@ -21,23 +21,21 @@
                 <thead>
                     <tr>
                         <th class="text-center">NO</th>
-                        <th class="text-center">ID</th>
                         <th class="text-center">ID Toko</th>
                         <th class="text-center">E - mail</th>
-                        <th class="text-center">Password</th>
                         <th class="text-center">Nama Toko</th>
                         <th class="text-center">Pemilik</th>
-                        <th class="text-center">Gender</th>
+                        <!-- <th class="text-center">Gender</th>
                         <th class="text-center">Tempat Lahir</th>
-                        <th class="text-center">Tanggal Lahir</th>
+                        <th class="text-center">Tanggal Lahir</th> -->
                         <th class="text-center">No Telephone</th>
                         <th class="text-center">Alamat</th>
-                        <th class="text-center">No KTP</th>
+                        <!-- <th class="text-center">No KTP</th> -->
                         <th class="text-center">Kota/Kab</th>
                         <th class="text-center">Provinsi</th>
                         <th class="text-center">Foto Profile</th>
-                        <th class="text-center">Tanggal Registrasi</th>
-                        <th class="text-center">Tanggal Kadaluarsa</th>
+                        <!-- <th class="text-center">Tanggal Registrasi</th>
+                        <th class="text-center">Tanggal Kadaluarsa</th> -->
                         <th class="text-center">Action</th>
                     </tr>
                 </thead>
@@ -49,23 +47,21 @@
                             $no++; ?>
                             <tr>
                                 <td class="text-center"><?php echo $no; ?></td>
-                                <td class="text-center"><?php echo $row->id; ?></td>
                                 <td class="text-center"><?php echo $row->idToko; ?></td>
                                 <td class="text-center"><?php echo $row->email; ?></td>
-                                <td class="text-center"><?php echo $row->password; ?></td>
                                 <td class="text-center"><?php echo $row->nama_toko; ?></td>
                                 <td class="text-center"><?php echo $row->pemilik; ?></td>
-                                <td class="text-center"><?php echo $row->gender; ?></td>
+                                <!-- <td class="text-center"><?php echo $row->gender; ?></td>
                                 <td class="text-center"><?php echo $row->tmp_lahir; ?></td>
-                                <td class="text-center"><?php echo $row->tgl_lahir; ?></td>
+                                <td class="text-center"><?php echo $row->tgl_lahir; ?></td> -->
                                 <td class="text-center"><?php echo $row->telp; ?></td>
                                 <td class="text-center"><?php echo $row->alamat; ?></td>
-                                <td class="text-center"><?php echo $row->no_ktp; ?></td>
+                                <!-- <td class="text-center"><?php echo $row->no_ktp; ?></td> -->
                                 <td class="text-center"><?php echo $row->kota_kab; ?></td>
                                 <td class="text-center"><?php echo $row->provinsi; ?></td>
                                 <td class="text-center"><img src="<?php echo base_url() . 'upload/foto/' . $row->foto_profil; ?>" width="80px" height="60px"></td>
-                                <td class="text-center"><?php echo $row->reg_date; ?></td>
-                                <td class="text-center"><?php echo $row->exp_date; ?></td>
+                                <!-- <td class="text-center"><?php echo $row->reg_date; ?></td>
+                                <td class="text-center"><?php echo $row->exp_date; ?></td> -->
                                 <td class="text-center">
 
                                     <a class="fa fa-edit" href="" data-toggle="modal" data-target="#exampleModal2" onclick="edit('<?php echo $row->id; ?>')"></a>
