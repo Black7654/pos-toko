@@ -94,8 +94,8 @@ class Toko extends CI_Controller
             );
             //var_dump($data);
             $simpan = $this->TokoModel->simpanData('tb_toko', $data);
-            return $simpan;
             redirect('toko');
+            return $simpan;
             // echo "berhasil";
         } else { //jika gagal upload
             $this->session->set_flashdata('message', 'Format Gambar Foto hanya boleh JPG, JPEG, PNG atau Ukuran file dari 5 MB!');
