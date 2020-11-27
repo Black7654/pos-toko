@@ -5,60 +5,44 @@
     <!-- row -->
     <div class="row">
 
-        <div class="col-xl-5 col-md-6 mb-4">
+        <div class="col-xl-6 col-md-6 mb-4">
             <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
-
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">ID Transaksi:</label>
-                        <input type="text" class="form-control" id="" name="" readonly>
-                    </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Kode Barang</label>
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Cari Barang" readonly="readonly" id="id_jamaah" name="id_jamaah">
                             <input type="hidden" name="" id="">
                             <span class="input-group-btn">
-                                <button class="btn btn-success" type="button" data-toggle="modal" data-target="#modal-jamaah"><i class="fa fa-search"></i></button>
+                                <button class="btn btn-success" type="button" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-search"></i> Klik Untuk Cari</button>
                             </span>
                         </div>
                     </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class=" col-xl-4 col-md-6 mb-4">
-            <div class="card border-left-success shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="form-group">
+                     <div class="form-group">
                         <label for="exampleInputPassword1">Nama Barang</label>
                         <input type="text" class="form-control" id="" name="" readonly>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div class=" col-xl-6 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                   
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Qty</label>
+                        <label for="exampleInputPassword1">Jumlah Barang:</label>
                         <input type="number" class="form-control" id="" name="" placeholder="Masukkan">
                     </div>
-                    <button type="button" class="btn btn-success" style="width: 100%;">Add</button>
+                    <div class="text-sm font-weight-bold text-success text-uppercase mb-1">
+                                Harga Barang:</div>
+                    <div class="h5 mb-0 font-weight-bold text-gray-800">Rp.215.000</div>
+                    <br>
+                    <button type="button" class="btn btn-success" style="width: 100%;"><i class="fa fa-shopping-cart"></i>&nbspMasukkan keranjang</button>
                 </div>
             </div>
         </div>
 
-
-        <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-info shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xl font-weight-bold text-success text-uppercase mb-1">
-                                Total Harga:</div><br><br>
-                            <div class="h2 mb-0 font-weight-bold text-gray-800">Rp.215.000</div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div class="col-xl-12 col-md-6 mb-4">
             <div class="card border-left-info shadow h-100 py-2">
@@ -103,7 +87,7 @@
             <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
                     <div class="form-group">
-                        <label for="exampleInputPassword1">subtotal:</label>
+                        <label for="exampleInputPassword1">Total:</label>
                         <input type="text" class="form-control" id="" name="" readonly>
                     </div>
                     <div class="form-group">
@@ -111,7 +95,7 @@
                         <input type="text" class="form-control" id="" name="">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Total Semua</label>
+                        <label for="exampleInputPassword1">Total Semua:</label>
                         <input type="text" class="form-control" id="" name="" readonly>
                     </div>
                 </div>
@@ -131,21 +115,55 @@
                         <input type="text" class="form-control" id="" name="" readonly>
                     </div>
 
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xl-12 col-md-6 mb-4">
-            <div class="card border-left-info shadow h-100 py-2">
-                <div class="card-body">
-
-                    <button type="button" class="btn btn-warning" style="width: 100%;">Batal</button>
+                    <button type="button" class="btn btn-success" style="width: 100%;">Bayar Sekarang</button>
                     <br><br>
-                    <button type="button" class="btn btn-success" style="width: 100%;">Simpan</button>
-
+                    <button type="button" class="btn btn-warning" style="width: 100%;">Batal</button>
+                    
+                    
                 </div>
             </div>
         </div>
-
     </div>
 </form>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Pencarian Barang</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+            <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th class="text-center">Kode Barang</th>
+                        <th class="text-center">Nama Barang</th>
+                        <th class="text-center">Harga Barang</th>
+                        <th class="text-center">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                                <td class="text-center"></td>
+                                <td class="text-center">
+                                     <button type="button" class="btn btn-success"><i class="fa fa-plus"></i> Masukkan Barang</button>                 
+                                </td>
+
+                            </tr>
+            
+                </tbody>
+            </table>            
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
