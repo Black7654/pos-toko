@@ -87,9 +87,9 @@
                                     <td>500</td>
                                     <td>4500</td>
                                     <td>
-                                        <a class="fa fa-edit" href="" data-toggle="modal" data-target="#exampleModal2">Ubah</a>
+                                        <button class="btn btn-default"><a href="#" class="fa fa-edit" data-toggle="modal" data-target="#exampleModal2"></a></button>
                                         &nbsp||&nbsp
-                                        <a class="fa fa-trash" href="#">Hapus</a>
+                                        <button class="btn btn-default"><a href="#" class="fa fa-trash"></a></button>
                                     </td>
                                 </tr>
                             </tbody>
