@@ -52,7 +52,7 @@
             	
             	<button type="submit" class="btn btn-success">Login</button>
 				<hr>
-				<a class="btn btn-success text-light" href="<?php echo base_url();?>register">REGISTER</a>
+				<a class="btn btn-success text-light" href="<?php echo base_url();?>login/register">REGISTER</a>
 				
             </form>
         </div>
