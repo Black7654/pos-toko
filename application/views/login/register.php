@@ -30,7 +30,7 @@
 			<form action="<?php echo base_url(); ?>dashboard" enctype="multipart/form-data" method="POST">
 				<img src="<?php echo base_url() . 'assets/'; ?>img/avatar.svg">
 				<h4 class="head">SELAMAT DATANG DI APLIKASI</h4>
-				<h2 class="title">POS-KITA</h2>
+				<h2 class="title">Registrasi</h2>
            		<div class="input-div one">
            		   <div class="i">
            		   		<i class="fas fa-user"></i>
@@ -52,7 +52,7 @@
             	
             	<button type="submit" class="btn btn-success">Login</button>
 				<hr>
-				<a class="btn btn-success text-light" href="<?php echo base_url();?>register">REGISTER</a>
+				<a class="btn btn-success text-light" href="<?php echo base_url();?>registrasi">REGISTER</a>
 				
             </form>
         </div>
