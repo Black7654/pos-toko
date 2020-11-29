@@ -32,7 +32,7 @@
 			<div class="col-lg">
 				<div class="p-5">
 					<div class="text-center">
-						<h1 class="h1 text-gray-900 mb-4"><u>Daftar Akun Baru<u></h1>
+						<h1 class="h1 text-gray-900 mb-4"><u><span class="fa fa-edit"></span>&nbspDaftar Akun Baru<u></h1>
 					</div>
 					<form enctype="multipart/form-data" action="<?php echo base_url(); ?>toko/simpan" method="POST">
 

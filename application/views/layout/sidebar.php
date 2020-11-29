@@ -25,11 +25,11 @@
  </div>
 
  <!-- Nav Item - Pages Collapse Menu -->
- <li class="nav-item">
+ <!-- <li class="nav-item">
      <a class="nav-link" href="<?php echo base_url(); ?>toko">
          <i class="fas fa-fw fa-store"></i>
          <span>Toko</span></a>
- </li>
+ </li> -->
 
  <!-- Transaksi -->
  <li class="nav-item">

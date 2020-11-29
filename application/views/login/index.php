@@ -27,7 +27,7 @@
 			<img src="<?php echo base_url() . 'assets/'; ?>img/shop.svg">
 		</div>
 		<div class="login-content">
-			<form action="<?php echo base_url(); ?>dashboard" enctype="multipart/form-data" method="POST">
+			<form action="<?php echo base_url(); ?>login/cek" enctype="multipart/form-data" method="POST">
 				<img src="<?php echo base_url() . 'assets/'; ?>img/avatar.svg">
 				<h4 class="head">SELAMAT DATANG DI APLIKASI</h4>
 				<h2 class="title">POS-KITA</h2>
@@ -36,8 +36,8 @@
            		   		<i class="fas fa-user"></i>
            		   </div>
            		   <div class="div">
-           		   		<h5>Username</h5>
-           		   		<input type="text" class="input">
+           		   		<h5>Email</h5>
+           		   		<input type="text" name="email" class="input">
            		   </div>
            		</div>
            		<div class="input-div pass">
@@ -46,7 +46,7 @@
            		   </div>
            		   <div class="div">
            		    	<h5>Password</h5>
-           		    	<input type="password" class="input">
+           		    	<input type="password" name="password" class="input">
             	   </div>
 				</div>
 				<button type="submit" class="btn btn-success"><span class="fa fa-sign-out-alt"></span>&nbspLogin</button>
