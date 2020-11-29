@@ -48,11 +48,10 @@
            		    	<h5>Password</h5>
            		    	<input type="password" class="input">
             	   </div>
-            	</div>
-            	
-            	<button type="submit" class="btn btn-success">Login</button>
+				</div>
+				<button type="submit" class="btn btn-success"><span class="fa fa-sign-out-alt"></span>&nbspLogin</button>
 				<hr>
-				<a class="btn btn-success text-light" href="<?php echo base_url();?>login/register">REGISTER</a>
+				<a class="text-center" href="<?php echo base_url(); ?>login/register"><h6>Belum Punya Akun? Klik Untuk Daftar</h6></a>
 				
             </form>
         </div>

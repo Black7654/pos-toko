@@ -248,7 +248,7 @@
     </div>
 </div>
 <script src="<?php echo base_url() . 'assets/'; ?>toko/formtoko.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>@endsection
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
 <script type="text/javascript">
     function edit(id) {
         var id = id;

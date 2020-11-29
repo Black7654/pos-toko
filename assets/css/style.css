@@ -47,6 +47,21 @@ form{
 	width: 360px;
 }
 
+.ktk{
+	width: 30%;
+	height: 30%;
+	border-radius: 15px;
+	border: 1px;
+	background-color:rgba(255, 255, 255, 0.363);
+
+}
+
+.kotak{
+	width:100%;
+	height:100%;
+	background-color: rgba(180, 43, 43, 0.329);
+}
+
 .login-content img{
     height: 100px;
 }

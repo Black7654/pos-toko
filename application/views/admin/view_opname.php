@@ -68,6 +68,7 @@
         </div>
     </div>
 </div>
+</div>
 <!-- end tabel -->
 
 <!-- Modal 1 -->
