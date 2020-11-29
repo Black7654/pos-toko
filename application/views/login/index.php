@@ -31,6 +31,13 @@
 				<img src="<?php echo base_url() . 'assets/'; ?>img/avatar.svg">
 				<h4 class="head">SELAMAT DATANG DI APLIKASI</h4>
 				<h2 class="title">POS-KITA</h2>
+        <?php if ($this->session->flashdata('SUCCESS')) {?>
+        <div class="alert alert-success alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <h4><i class="icon fa fa-check"></i> Success!</h4>
+                 <?= $this->session->flashdata('SUCCESS')?>
+            </div>
+        <?php } ?>
            		<div class="input-div one">
            		   <div class="i">
            		   		<i class="fas fa-user"></i>

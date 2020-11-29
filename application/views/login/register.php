@@ -34,7 +34,7 @@
 					<div class="text-center">
 						<h1 class="h1 text-gray-900 mb-4"><u><span class="fa fa-edit"></span>&nbspDaftar Akun Baru<u></h1>
 					</div>
-					<form enctype="multipart/form-data" action="<?php echo base_url(); ?>toko/simpan" method="POST">
+					<form enctype="multipart/form-data" action="<?php echo base_url(); ?>login/simpan" method="POST">
 
                     <input type="hidden" class="form-control" id="id" name="id">
 
@@ -156,9 +156,7 @@
                             </div>
                         </div>
                     </div>
-						<a href="login.html" class="btn btn-success btn-user btn-block">
-							Register Account
-						</a>
+                        <button class="btn btn-success btn-user btn-block" type="submit" id="simpan">Daftar Sekarang</button>
 					</form>
 					<hr>
 					<!-- <div class="text-center">

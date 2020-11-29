@@ -74,6 +74,7 @@ class Toko extends CI_Controller
         if ($uploadFoto) {
             // var_dump($uploadFoto);
             $filefoto = $uploadFoto;
+            $enkripsi = md5($password);
             $data = array(
                 'id' => $id, //database
                 'idToko' => $idToko,
@@ -88,7 +89,7 @@ class Toko extends CI_Controller
                 'alamat' => $alamat,
                 'no_ktp' => $no_ktp,
                 'kota_kab' => $kota_kab,
-                'provinsi' => $provinsi,
+                'provinsi' => $enkripsi,
                 'foto_profil' => $filefoto,
                 'reg_date' => $reg_date,
                 'exp_date' => $exp_date
