@@ -120,7 +120,7 @@ class Login extends CI_Controller
             // var_dump($uploadFoto);
             $filefoto = $uploadFoto;
             $enkripsi = md5($password);
-            $exp_date =  date('Y-m-d', strtotime('+1 month', strtotime(date('Y-m-d'))));
+            $exp_date =  date('Y-m-d', strtotime('+7 days', strtotime(date('Y-m-d'))));
             $data = array(
                 'id' => $id, //database
                 'idToko' => $idToko,
@@ -137,7 +137,7 @@ class Login extends CI_Controller
                 'kota_kab' => $kota_kab,
                 'provinsi' => $provinsi,
                 'foto_profil' => $filefoto,
-                'is_aktif' => 'no',
+                'is_aktif' => 'yes',
                 'reg_date' => date('Y-m-d'),
                 'exp_date' => $exp_date
             );
