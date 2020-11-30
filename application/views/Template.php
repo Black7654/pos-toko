@@ -96,8 +96,8 @@
                 </div>
                 <div class="modal-body">Anda Akan Keluar dari Halaman Ini....???</div>
                 <div class="modal-footer">
-                    <button class="btn btn-danger" type="button" data-dismiss="modal"><span class="fa fa-times"></span>&nbspCancel</button>
-                    <a class="btn btn-success" href="<?php echo base_url(); ?>login/logout"><span class="fa fa-sign-out-alt"></span>&nbspLogout</a>
+                    <button class="btn btn-danger" type="button" data-dismiss="modal"><span class="fa fa-times"></span>&nbspBatal</button>
+                    <a class="btn btn-success" href="<?php echo base_url(); ?>login/logout"><span class="fa fa-sign-out-alt"></span>&nbspKeluar</a>
                 </div>
             </div>
         </div>
