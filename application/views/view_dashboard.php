@@ -4,7 +4,13 @@
         <span class="fas fa-tachometer-alt"></span>&nbspDashboard</h1>
 </div>
 <!-- End Page Heading -->
-
+ <?php if ($this->session->flashdata('SUCCESS')) {?>
+ <div class="alert alert-success alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <h4><i class="icon fa fa-check"></i> Success!</h4>
+                 <?= $this->session->flashdata('SUCCESS')?>
+            </div>
+            <?php } ?>
 <!-- Content Row -->
 <div class="row">
 

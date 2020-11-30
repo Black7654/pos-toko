@@ -38,6 +38,13 @@
                  <?= $this->session->flashdata('SUCCESS')?>
             </div>
         <?php } ?>
+        <?php if ($this->session->flashdata('DANGER')) {?>
+        <div class="alert alert-danger alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <h4><i class="icon fa fa-check"></i> Gagal Login!</h4>
+                 <?= $this->session->flashdata('DANGER')?>
+            </div>
+        <?php } ?>
            		<div class="input-div one">
            		   <div class="i">
            		   		<i class="fas fa-user"></i>

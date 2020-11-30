@@ -12,27 +12,27 @@ class Login extends CI_Controller
     
     public function index()
     {
+
         $this->load->view('login/index.php');
     }
 
     public function cek() { 
 		$email=$this->input->post('email',TRUE);
 		$password=$this->input->post('password',TRUE);
-		
-		$cek=$this->LoginModel->cek($email,$password);
-			if($cek == TRUE) {
-                   
-			$data=array('email'=>$email,'logged_in'=>TRUE );
-			$this->session->set_userdata($data);
-			var_dump($this->session->userdata());
+        $cek=$this->LoginModel->cek($email,$password);
+            if($cek == TRUE) {
+            $data=array('email'=>$email,
+                'logged_in'=>TRUE );
+            $this->session->set_userdata($data);
+            // var_dump($this->session->userdata());
+             $this->session->set_flashdata('SUCCESS', 'Berhasil Login. Selamat Datang Di POS-KITA');
             redirect('dashboard');
-            // var_dump('$data');
-				// echo "bisa";
-			} else {			
-            redirect('login','refresh');	
+            }else {   
+            $this->session->set_flashdata('DANGER', 'Maaf Akun Belum Aktif');         
+            redirect('login','refresh');    
+            }
             
-				//  echo "gagal";
-			}	
+
 		
     }
     
@@ -83,14 +83,15 @@ class Login extends CI_Controller
         $kota_kab = $this->input->post('kota_kab');
         $provinsi = $this->input->post('provinsi');
         // $foto_profil = $this->input->post('foto_profil');
-        $reg_date = $this->input->post('reg_date');
-        $exp_date = $this->input->post('exp_date');
+        // $reg_date = $this->input->post('reg_date');
+         
 
         $uploadFoto = $this->_uploadImg($idToko, 'foto', 'foto_profil');
         if ($uploadFoto) {
             // var_dump($uploadFoto);
             $filefoto = $uploadFoto;
             $enkripsi = md5($password);
+            $exp_date =  date('Y-m-d',strtotime('+1 month',strtotime(date('Y-m-d'))));
             $data = array(
                 'id' => $id, //database
                 'idToko' => $idToko,
@@ -108,7 +109,7 @@ class Login extends CI_Controller
                 'provinsi' => $provinsi,
                 'foto_profil' => $filefoto,
                 'is_aktif' => 'no',
-                'reg_date' => $reg_date,
+                'reg_date' => date('Y-m-d'),
                 'exp_date' => $exp_date
             );
             //var_dump($data);

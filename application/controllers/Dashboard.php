@@ -7,10 +7,10 @@ class Dashboard extends CI_Controller
     {
         parent::__construct();
         if(!$this->session->userdata('logged_in')) {redirect('login','refresh');}
-        // $this->load->model("Model_admin");
     }
     public function index()
     {
+    	
         $this->template->display_admin('view_dashboard.php');
     }
 }

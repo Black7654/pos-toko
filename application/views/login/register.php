@@ -143,7 +143,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="exampleInputPassword1">Tanggal Registrasi</label>
@@ -155,7 +155,7 @@
                                 <input type="date" class="form-control" id="exp_date" name="exp_date" placeholder="Masukkan Tanggal Kadaluarsa">
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                         <button class="btn btn-success btn-user btn-block" type="submit" id="simpan">Daftar Sekarang</button>
 					</form>
 					<hr>
