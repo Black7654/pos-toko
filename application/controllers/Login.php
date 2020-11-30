@@ -9,48 +9,77 @@ class Login extends CI_Controller
         $this->load->model("LoginModel");
         $this->load->model("TokoModel");
     }
-    
+
     public function index()
     {
 
         $this->load->view('login/index.php');
     }
 
-    public function cek() { 
-		$email=$this->input->post('email',TRUE);
-		$password=$this->input->post('password',TRUE);
-        $cek=$this->LoginModel->cek($email,$password);
-            if($cek == TRUE) {
-            $data=array('email'=>$email,
-                'logged_in'=>TRUE );
+    public function cek()
+    {
+        $email = $this->input->post('email', TRUE);
+        $password = $this->input->post('password', TRUE);
+        $cek = $this->LoginModel->cek($email, $password);
+        $tgl_now = date('Y-m-d');
+        // cek apakah user ada
+        if ($cek == TRUE) {
+            $dataUser = $this->LoginModel->GetIdToko($email, $password)->row();
+            $idToko = $dataUser->idToko;
+            $pemilik = $dataUser->pemilik;
+            $exp_date = $dataUser->exp_date;
+            $data = array(
+                'email' => $email,
+                'idToko' => $idToko,
+                'pemilik' => $pemilik,
+                'exp_date' => $exp_date,
+                'logged_in' => true
+            );
             $this->session->set_userdata($data);
-            // var_dump($this->session->userdata());
-             $this->session->set_flashdata('SUCCESS', 'Berhasil Login. Selamat Datang Di POS-KITA');
-            redirect('dashboard');
-            }else {   
-            $this->session->set_flashdata('DANGER', 'Maaf Akun Belum Aktif');         
-            redirect('login','refresh');    
+            // var_dump($data);
+            // jika tanggal sekarang sama dengan tanggal expired
+            if ($tgl_now >= $exp_date) {
+                $this->LoginModel->updateIsAktif($idToko);
+                $this->session->set_flashdata('DANGER', 'Akun Anda Sudah Expired');
+                redirect('login');
+            } else {
+                $this->LoginModel->updateIsLogin($idToko);
+                $this->session->set_flashdata('SUCCESS', 'Berhasil Login. Selamat Datang Di POS-KITA');
+                redirect('dashboard');
             }
-            
+        } else {
+            if ($cek == TRUE) {
+                $data = array(
+                    'email' => $email,
+                    'is_aktif' => 'no',
+                    'logged_in' => TRUE
+                );
+                $this->session->set_flashdata('DANGER', 'Akun Anda Sudah Expired');
+                redirect('login');
+            } else {
 
-		
+                $this->session->set_flashdata('DANGER', 'Maaf Akun yg Anda Masukkan Tidak Terdaftar');
+                redirect('login', 'refresh');
+            }
+        }
     }
-    
-    public function logout() {
-		$this->session->unset_userdata('email');
-		$this->session->unset_userdata('logged_in');
-		$this->session->sess_destroy();
-		redirect('login','refresh');
-	}
+
+    public function logout()
+    {
+        $this->session->unset_userdata('email');
+        $this->session->unset_userdata('logged_in');
+        $this->session->sess_destroy();
+        redirect('login', 'refresh');
+    }
 
     public function register()
     {
         $data['provinsi'] = $this->TokoModel->getData('tb_provinsi');
         $data['kota'] = $this->TokoModel->getData('tb_kabupaten');
-        $this->load->view('login/register.php',$data);
+        $this->load->view('login/register.php', $data);
     }
 
-     public function _uploadImg($idToko, $jenis, $image)
+    public function _uploadImg($idToko, $jenis, $image)
     {
         $config['upload_path'] = './upload/' . $jenis . '/';
         $config['allowed_types'] = 'jpg|jpeg|png';
@@ -84,14 +113,14 @@ class Login extends CI_Controller
         $provinsi = $this->input->post('provinsi');
         // $foto_profil = $this->input->post('foto_profil');
         // $reg_date = $this->input->post('reg_date');
-         
+
 
         $uploadFoto = $this->_uploadImg($idToko, 'foto', 'foto_profil');
         if ($uploadFoto) {
             // var_dump($uploadFoto);
             $filefoto = $uploadFoto;
             $enkripsi = md5($password);
-            $exp_date =  date('Y-m-d',strtotime('+1 month',strtotime(date('Y-m-d'))));
+            $exp_date =  date('Y-m-d', strtotime('+1 month', strtotime(date('Y-m-d'))));
             $data = array(
                 'id' => $id, //database
                 'idToko' => $idToko,
