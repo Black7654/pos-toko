@@ -28,13 +28,13 @@
      </div>
    </li>
 
-
+   <span class="mr-0 d-none d-lg-inline text-gray-500 small mt-4">Selamat Datang</span>
    <div class="topbar-divider d-none d-sm-block"></div>
 
    <!-- Nav Item - User Information -->
    <li class="nav-item dropdown no-arrow">
      <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-       <span class="mr-2 d-none d-lg-inline text-gray-600 small">Moch Galuh Bernady</span>
+       <span class="mr-2 ml-auto d-none d-lg-inline text-gray-600 small">Moch Galuh Bernady</span>
        <img class="img-profile rounded-circle" src="assets/img/profile/profile.jpg">
      </a>
      <!-- Dropdown - User Information -->
