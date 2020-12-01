@@ -24,31 +24,31 @@ class Login extends CI_Controller
         $tgl_now = date('Y-m-d');
         // cek apakah user ada
         if ($cek == TRUE) {
+            // untuk get data yg login sesuai idToko
             $dataUser = $this->LoginModel->GetIdToko($email, $password)->row();
             $idToko = $dataUser->idToko;
             $pemilik = $dataUser->pemilik;
             $exp_date = $dataUser->exp_date;
-            $data = array(
-                'email' => $email,
-                'idToko' => $idToko,
-                'pemilik' => $pemilik,
-                'exp_date' => $exp_date,
-                'logged_in' => true
-            );
-            $this->session->set_userdata($data);
-            // var_dump($data);
             // jika tanggal sekarang sama dengan tanggal expired
             if ($tgl_now >= $exp_date) {
                 $this->LoginModel->updateIsAktif($idToko);
                 $this->session->set_flashdata('DANGER', 'Akun Anda Sudah Expired');
                 redirect('login');
-            } else {
-                $this->LoginModel->updateIsLogin($idToko);
+                // jika tanggal dan status is aktif yes login
+            } elseif ($cek == TRUE) {
+                $data = array(
+                    'email' => $email,
+                    'idToko' => $idToko,
+                    'pemilik' => $pemilik,
+                    'exp_date' => $exp_date,
+                    'logged_in' => true
+                );
+                // menyimpan session
+                $this->session->set_userdata($data);
                 $this->session->set_flashdata('SUCCESS', 'Berhasil Login. Selamat Datang Di POS-KITA');
                 redirect('dashboard');
-            }
-        } else {
-            if ($cek == TRUE) {
+                // jika status is aktif no 
+            } else {
                 $data = array(
                     'email' => $email,
                     'is_aktif' => 'no',
@@ -56,11 +56,10 @@ class Login extends CI_Controller
                 );
                 $this->session->set_flashdata('DANGER', 'Akun Anda Sudah Expired');
                 redirect('login');
-            } else {
-
-                $this->session->set_flashdata('DANGER', 'Maaf Akun yg Anda Masukkan Tidak Terdaftar');
-                redirect('login', 'refresh');
             }
+        } else {
+            $this->session->set_flashdata('DANGER', 'Maaf Akun yg Anda Masukkan Tidak Terdaftar');
+            redirect('login', 'refresh');
         }
     }
 
