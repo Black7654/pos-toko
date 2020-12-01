@@ -21,6 +21,19 @@ class LoginModel extends CI_Model
 		}
 	}
 
+	public function cekAdmin($email, $pass)
+	{ //fungsi Cek email apakah ada dalam tabel admin
+		$this->db->where('email', $email);
+		$this->db->where('password', md5($pass));
+		//$this->db->where('is_aktif', 'yes');
+		$data = $this->db->get('tb_admin');
+		if ($data->num_rows() > 0) {
+			return TRUE;
+		} else {
+			return FALSE;
+		}
+	}
+
 	function updateIsLogin($idToko)
 	{
 		$data = array(
@@ -46,6 +59,13 @@ class LoginModel extends CI_Model
 		$data = $this->db->where('email', $email);
 		$data = $this->db->where('password', md5($pass));
 		$data = $this->db->get('tb_toko');
+		return $data;
+	}
+	function GetIdAdmin($email, $pass)
+	{
+		$data = $this->db->where('email', $email);
+		$data = $this->db->where('password', md5($pass));
+		$data = $this->db->get('tb_admin');
 		return $data;
 	}
 }

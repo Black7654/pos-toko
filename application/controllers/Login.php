@@ -21,6 +21,7 @@ class Login extends CI_Controller
         $email = $this->input->post('email', TRUE);
         $password = $this->input->post('password', TRUE);
         $cek = $this->LoginModel->cek($email, $password);
+        $cek2 = $this->LoginModel->cekAdmin($email, $password);
         $tgl_now = date('Y-m-d');
         // cek apakah user ada
         if ($cek == TRUE) {
@@ -29,6 +30,7 @@ class Login extends CI_Controller
             $idToko = $dataUser->idToko;
             $pemilik = $dataUser->pemilik;
             $exp_date = $dataUser->exp_date;
+
             // jika tanggal sekarang sama dengan tanggal expired
             if ($tgl_now >= $exp_date) {
                 $this->LoginModel->updateIsAktif($idToko);
@@ -41,8 +43,10 @@ class Login extends CI_Controller
                     'idToko' => $idToko,
                     'pemilik' => $pemilik,
                     'exp_date' => $exp_date,
+                    'akses' => 'user',
                     'logged_in' => true
                 );
+                // var_dump($data);
                 // menyimpan session
                 $this->session->set_userdata($data);
                 $this->session->set_flashdata('SUCCESS', 'Berhasil Login. Selamat Datang Di POS-KITA');
@@ -57,6 +61,23 @@ class Login extends CI_Controller
                 $this->session->set_flashdata('DANGER', 'Akun Anda Sudah Expired');
                 redirect('login');
             }
+        } elseif ($cek2 == TRUE) {
+            // untuk get data yg login sesuai Admin
+            $dataAdmin = $this->LoginModel->GetIdAdmin($email, $password)->row();
+            $idAdmin = $dataAdmin->id_admin;
+            $nama = $dataAdmin->pemilik;
+            $data = array(
+                'email' => $email,
+                'id_admin' => $idAdmin,
+                'pemilik' => $nama,
+                'akses' => 'admin',
+                'logged_in' => true
+            );
+            var_dump($data);
+            // menyimpan session
+            $this->session->set_userdata($data);
+            $this->session->set_flashdata('SUCCESS', 'Berhasil Login. Selamat Datang Di POS-KITA');
+            redirect('dashboard');
         } else {
             $this->session->set_flashdata('DANGER', 'Maaf Akun yg Anda Masukkan Tidak Terdaftar');
             redirect('login', 'refresh');

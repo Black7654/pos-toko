@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 20, 2020 at 12:14 PM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.2.34
+-- Waktu pembuatan: 01 Des 2020 pada 12.58
+-- Versi server: 10.4.14-MariaDB
+-- Versi PHP: 7.2.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,30 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_barang`
+-- Struktur dari tabel `tb_admin`
+--
+
+CREATE TABLE `tb_admin` (
+  `id_admin` int(11) NOT NULL,
+  `email` varchar(60) DEFAULT NULL,
+  `pemilik` varchar(100) DEFAULT NULL,
+  `jk` enum('laki-laki','perempuan') DEFAULT NULL,
+  `alamat` text NOT NULL,
+  `no_tlp` varchar(50) DEFAULT NULL,
+  `password` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `tb_admin`
+--
+
+INSERT INTO `tb_admin` (`id_admin`, `email`, `pemilik`, `jk`, `alamat`, `no_tlp`, `password`) VALUES
+(1, 'admin@gmail.com', 'Deny Kurniawan', 'laki-laki', 'Jl.setono gg 6\r\n                                                        \r\n                                                        \r\n                                                        \r\n                                                        \r\n                                                        \r\n                                                        \r\n                                                        \r\n                                                        \r\n                                                        \r\n                                                        \r\n                                                        \r\n                                                        \r\n                                                        ', '987897', '21232f297a57a5a743894a0e4a801fc3');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_barang`
 --
 
 CREATE TABLE `tb_barang` (
@@ -49,7 +72,7 @@ CREATE TABLE `tb_barang` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_det_transaksi`
+-- Struktur dari tabel `tb_det_transaksi`
 --
 
 CREATE TABLE `tb_det_transaksi` (
@@ -66,7 +89,7 @@ CREATE TABLE `tb_det_transaksi` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_kabupaten`
+-- Struktur dari tabel `tb_kabupaten`
 --
 
 CREATE TABLE `tb_kabupaten` (
@@ -77,7 +100,7 @@ CREATE TABLE `tb_kabupaten` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tb_kabupaten`
+-- Dumping data untuk tabel `tb_kabupaten`
 --
 
 INSERT INTO `tb_kabupaten` (`id_kab`, `id_prov`, `nama`, `id_jenis`) VALUES
@@ -599,7 +622,7 @@ INSERT INTO `tb_kabupaten` (`id_kab`, `id_prov`, `nama`, `id_jenis`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_kategori`
+-- Struktur dari tabel `tb_kategori`
 --
 
 CREATE TABLE `tb_kategori` (
@@ -613,7 +636,7 @@ CREATE TABLE `tb_kategori` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_log_modal_awal`
+-- Struktur dari tabel `tb_log_modal_awal`
 --
 
 CREATE TABLE `tb_log_modal_awal` (
@@ -627,7 +650,7 @@ CREATE TABLE `tb_log_modal_awal` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_log_shift`
+-- Struktur dari tabel `tb_log_shift`
 --
 
 CREATE TABLE `tb_log_shift` (
@@ -641,7 +664,7 @@ CREATE TABLE `tb_log_shift` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_modal_awal`
+-- Struktur dari tabel `tb_modal_awal`
 --
 
 CREATE TABLE `tb_modal_awal` (
@@ -654,7 +677,7 @@ CREATE TABLE `tb_modal_awal` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_opname`
+-- Struktur dari tabel `tb_opname`
 --
 
 CREATE TABLE `tb_opname` (
@@ -676,7 +699,7 @@ CREATE TABLE `tb_opname` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_provinsi`
+-- Struktur dari tabel `tb_provinsi`
 --
 
 CREATE TABLE `tb_provinsi` (
@@ -685,7 +708,7 @@ CREATE TABLE `tb_provinsi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tb_provinsi`
+-- Dumping data untuk tabel `tb_provinsi`
 --
 
 INSERT INTO `tb_provinsi` (`id_prov`, `nama`) VALUES
@@ -727,7 +750,7 @@ INSERT INTO `tb_provinsi` (`id_prov`, `nama`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_rak`
+-- Struktur dari tabel `tb_rak`
 --
 
 CREATE TABLE `tb_rak` (
@@ -741,7 +764,7 @@ CREATE TABLE `tb_rak` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_satuan`
+-- Struktur dari tabel `tb_satuan`
 --
 
 CREATE TABLE `tb_satuan` (
@@ -753,7 +776,7 @@ CREATE TABLE `tb_satuan` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_supplier`
+-- Struktur dari tabel `tb_supplier`
 --
 
 CREATE TABLE `tb_supplier` (
@@ -769,7 +792,7 @@ CREATE TABLE `tb_supplier` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_toko`
+-- Struktur dari tabel `tb_toko`
 --
 
 CREATE TABLE `tb_toko` (
@@ -796,17 +819,20 @@ CREATE TABLE `tb_toko` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tb_toko`
+-- Dumping data untuk tabel `tb_toko`
 --
 
 INSERT INTO `tb_toko` (`id`, `idToko`, `email`, `password`, `nama_toko`, `pemilik`, `gender`, `tmp_lahir`, `tgl_lahir`, `telp`, `alamat`, `no_ktp`, `kota_kab`, `provinsi`, `foto_profil`, `reg_date`, `exp_date`, `is_aktif`, `is_login`, `last_login`) VALUES
-(1, NULL, 'c@gmail.com', 'coba', 'coba', 'coba', 'L', 'kediri', '2222-02-22', '687678', 'kediri', '78676', 'ke', 'ja', NULL, '2222-02-22', '2222-02-22', NULL, NULL, NULL),
-(2, 'TKO640974281236', 'd@gmail.com', '123', 'coba2', 'coba2', 'L', 'kediri', '2222-02-22', '43324', 'kediri', '322', 'ke', 'ja', NULL, '2222-02-22', '2222-02-22', NULL, NULL, NULL);
+(1, NULL, 'c@gmail.com', 'coba', 'coba', 'coba', 'L', 'kediri', '2222-02-22', '687678', 'kediri', '78676', 'ke', 'ja', NULL, '2222-02-22', '2222-02-22', 'no', 'yes', NULL),
+(3, 'TKO617100438358', 'd@gmail.com', '202cb962ac59075b964b07152d234b70', 'deny', 'deny', 'L', 'kediri', '2222-02-22', '324223', 'kediri', '342432', '1101', '11', NULL, '2222-02-22', '2222-02-22', 'yes', NULL, NULL),
+(4, 'TKO124238397660', 'c@gmail.com', 'h', 'j', 'j', 'L', 'd', '2222-02-22', '453354', 'f', '54354', '1101', '11', '21112020070826_TKO124238397660.jpg', '2222-12-22', '2222-02-22', NULL, NULL, NULL),
+(5, 'TKO213089390464', 'goblind03@gmail.com', '202cb962ac59075b964b07152d234b70', 'UD.JAYA', 'deny kurniawan', 'L', 'Kediri', '2000-12-15', '085732078030', 'Jalan.Setono Gg VI', '098787987', '3571', '35', '30112020124729_TKO213089390464.jpg', '2020-11-30', '2020-12-02', 'yes', 'yes', '2020-12-01'),
+(6, 'TKO692047012963', 'goblind04@gmail.com', '202cb962ac59075b964b07152d234b70', 'UD BUDI', 'Kurniawan', 'L', 'KEDIRI', '2000-12-15', '98789797', 'SETONO', '787986', '1101', '11', '30112020150324_TKO692047012963.jpg', '2020-11-30', '2020-12-07', 'yes', 'yes', '2020-11-30');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_transaksi`
+-- Struktur dari tabel `tb_transaksi`
 --
 
 CREATE TABLE `tb_transaksi` (
@@ -822,7 +848,7 @@ CREATE TABLE `tb_transaksi` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_user`
+-- Struktur dari tabel `tb_user`
 --
 
 CREATE TABLE `tb_user` (
@@ -850,149 +876,161 @@ CREATE TABLE `tb_user` (
 --
 
 --
--- Indexes for table `tb_barang`
+-- Indeks untuk tabel `tb_admin`
+--
+ALTER TABLE `tb_admin`
+  ADD PRIMARY KEY (`id_admin`);
+
+--
+-- Indeks untuk tabel `tb_barang`
 --
 ALTER TABLE `tb_barang`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tb_kabupaten`
+-- Indeks untuk tabel `tb_kabupaten`
 --
 ALTER TABLE `tb_kabupaten`
   ADD PRIMARY KEY (`id_kab`);
 
 --
--- Indexes for table `tb_kategori`
+-- Indeks untuk tabel `tb_kategori`
 --
 ALTER TABLE `tb_kategori`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tb_log_modal_awal`
+-- Indeks untuk tabel `tb_log_modal_awal`
 --
 ALTER TABLE `tb_log_modal_awal`
   ADD PRIMARY KEY (`idLog`);
 
 --
--- Indexes for table `tb_log_shift`
+-- Indeks untuk tabel `tb_log_shift`
 --
 ALTER TABLE `tb_log_shift`
   ADD PRIMARY KEY (`idLog`);
 
 --
--- Indexes for table `tb_modal_awal`
+-- Indeks untuk tabel `tb_modal_awal`
 --
 ALTER TABLE `tb_modal_awal`
   ADD PRIMARY KEY (`idModal`);
 
 --
--- Indexes for table `tb_opname`
+-- Indeks untuk tabel `tb_opname`
 --
 ALTER TABLE `tb_opname`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tb_provinsi`
+-- Indeks untuk tabel `tb_provinsi`
 --
 ALTER TABLE `tb_provinsi`
   ADD PRIMARY KEY (`id_prov`);
 
 --
--- Indexes for table `tb_rak`
+-- Indeks untuk tabel `tb_rak`
 --
 ALTER TABLE `tb_rak`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tb_satuan`
+-- Indeks untuk tabel `tb_satuan`
 --
 ALTER TABLE `tb_satuan`
   ADD PRIMARY KEY (`idSatuan`);
 
 --
--- Indexes for table `tb_supplier`
+-- Indeks untuk tabel `tb_supplier`
 --
 ALTER TABLE `tb_supplier`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tb_toko`
+-- Indeks untuk tabel `tb_toko`
 --
 ALTER TABLE `tb_toko`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tb_user`
+-- Indeks untuk tabel `tb_user`
 --
 ALTER TABLE `tb_user`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `tb_barang`
+-- AUTO_INCREMENT untuk tabel `tb_admin`
+--
+ALTER TABLE `tb_admin`
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT untuk tabel `tb_barang`
 --
 ALTER TABLE `tb_barang`
   MODIFY `id` bigint(100) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tb_kategori`
+-- AUTO_INCREMENT untuk tabel `tb_kategori`
 --
 ALTER TABLE `tb_kategori`
   MODIFY `id` bigint(100) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tb_log_modal_awal`
+-- AUTO_INCREMENT untuk tabel `tb_log_modal_awal`
 --
 ALTER TABLE `tb_log_modal_awal`
   MODIFY `idLog` bigint(100) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tb_log_shift`
+-- AUTO_INCREMENT untuk tabel `tb_log_shift`
 --
 ALTER TABLE `tb_log_shift`
   MODIFY `idLog` bigint(100) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tb_modal_awal`
+-- AUTO_INCREMENT untuk tabel `tb_modal_awal`
 --
 ALTER TABLE `tb_modal_awal`
   MODIFY `idModal` bigint(100) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tb_opname`
+-- AUTO_INCREMENT untuk tabel `tb_opname`
 --
 ALTER TABLE `tb_opname`
   MODIFY `id` bigint(100) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tb_rak`
+-- AUTO_INCREMENT untuk tabel `tb_rak`
 --
 ALTER TABLE `tb_rak`
   MODIFY `id` bigint(100) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tb_satuan`
+-- AUTO_INCREMENT untuk tabel `tb_satuan`
 --
 ALTER TABLE `tb_satuan`
   MODIFY `idSatuan` bigint(100) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tb_supplier`
+-- AUTO_INCREMENT untuk tabel `tb_supplier`
 --
 ALTER TABLE `tb_supplier`
   MODIFY `id` bigint(100) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tb_toko`
+-- AUTO_INCREMENT untuk tabel `tb_toko`
 --
 ALTER TABLE `tb_toko`
-  MODIFY `id` bigint(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `tb_user`
+-- AUTO_INCREMENT untuk tabel `tb_user`
 --
 ALTER TABLE `tb_user`
   MODIFY `id` bigint(100) NOT NULL AUTO_INCREMENT;
