@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 01 Des 2020 pada 12.58
--- Versi server: 10.4.14-MariaDB
--- Versi PHP: 7.2.34
+-- Generation Time: Dec 01, 2020 at 01:38 PM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.2.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_admin`
+-- Table structure for table `tb_admin`
 --
 
 CREATE TABLE `tb_admin` (
@@ -38,7 +38,7 @@ CREATE TABLE `tb_admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tb_admin`
+-- Dumping data for table `tb_admin`
 --
 
 INSERT INTO `tb_admin` (`id_admin`, `email`, `pemilik`, `jk`, `alamat`, `no_tlp`, `password`) VALUES
@@ -47,7 +47,7 @@ INSERT INTO `tb_admin` (`id_admin`, `email`, `pemilik`, `jk`, `alamat`, `no_tlp`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_barang`
+-- Table structure for table `tb_barang`
 --
 
 CREATE TABLE `tb_barang` (
@@ -72,7 +72,7 @@ CREATE TABLE `tb_barang` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_det_transaksi`
+-- Table structure for table `tb_det_transaksi`
 --
 
 CREATE TABLE `tb_det_transaksi` (
@@ -89,7 +89,7 @@ CREATE TABLE `tb_det_transaksi` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_kabupaten`
+-- Table structure for table `tb_kabupaten`
 --
 
 CREATE TABLE `tb_kabupaten` (
@@ -100,7 +100,7 @@ CREATE TABLE `tb_kabupaten` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tb_kabupaten`
+-- Dumping data for table `tb_kabupaten`
 --
 
 INSERT INTO `tb_kabupaten` (`id_kab`, `id_prov`, `nama`, `id_jenis`) VALUES
@@ -622,7 +622,7 @@ INSERT INTO `tb_kabupaten` (`id_kab`, `id_prov`, `nama`, `id_jenis`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_kategori`
+-- Table structure for table `tb_kategori`
 --
 
 CREATE TABLE `tb_kategori` (
@@ -636,7 +636,7 @@ CREATE TABLE `tb_kategori` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_log_modal_awal`
+-- Table structure for table `tb_log_modal_awal`
 --
 
 CREATE TABLE `tb_log_modal_awal` (
@@ -650,7 +650,7 @@ CREATE TABLE `tb_log_modal_awal` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_log_shift`
+-- Table structure for table `tb_log_shift`
 --
 
 CREATE TABLE `tb_log_shift` (
@@ -664,7 +664,7 @@ CREATE TABLE `tb_log_shift` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_modal_awal`
+-- Table structure for table `tb_modal_awal`
 --
 
 CREATE TABLE `tb_modal_awal` (
@@ -677,7 +677,7 @@ CREATE TABLE `tb_modal_awal` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_opname`
+-- Table structure for table `tb_opname`
 --
 
 CREATE TABLE `tb_opname` (
@@ -699,7 +699,7 @@ CREATE TABLE `tb_opname` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_provinsi`
+-- Table structure for table `tb_provinsi`
 --
 
 CREATE TABLE `tb_provinsi` (
@@ -708,7 +708,7 @@ CREATE TABLE `tb_provinsi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tb_provinsi`
+-- Dumping data for table `tb_provinsi`
 --
 
 INSERT INTO `tb_provinsi` (`id_prov`, `nama`) VALUES
@@ -750,7 +750,7 @@ INSERT INTO `tb_provinsi` (`id_prov`, `nama`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_rak`
+-- Table structure for table `tb_rak`
 --
 
 CREATE TABLE `tb_rak` (
@@ -764,7 +764,7 @@ CREATE TABLE `tb_rak` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_satuan`
+-- Table structure for table `tb_satuan`
 --
 
 CREATE TABLE `tb_satuan` (
@@ -776,7 +776,7 @@ CREATE TABLE `tb_satuan` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_supplier`
+-- Table structure for table `tb_supplier`
 --
 
 CREATE TABLE `tb_supplier` (
@@ -792,7 +792,7 @@ CREATE TABLE `tb_supplier` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_toko`
+-- Table structure for table `tb_toko`
 --
 
 CREATE TABLE `tb_toko` (
@@ -819,7 +819,7 @@ CREATE TABLE `tb_toko` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tb_toko`
+-- Dumping data for table `tb_toko`
 --
 
 INSERT INTO `tb_toko` (`id`, `idToko`, `email`, `password`, `nama_toko`, `pemilik`, `gender`, `tmp_lahir`, `tgl_lahir`, `telp`, `alamat`, `no_ktp`, `kota_kab`, `provinsi`, `foto_profil`, `reg_date`, `exp_date`, `is_aktif`, `is_login`, `last_login`) VALUES
@@ -832,7 +832,7 @@ INSERT INTO `tb_toko` (`id`, `idToko`, `email`, `password`, `nama_toko`, `pemili
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_transaksi`
+-- Table structure for table `tb_transaksi`
 --
 
 CREATE TABLE `tb_transaksi` (
@@ -848,7 +848,7 @@ CREATE TABLE `tb_transaksi` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tb_user`
+-- Table structure for table `tb_user`
 --
 
 CREATE TABLE `tb_user` (
@@ -876,161 +876,161 @@ CREATE TABLE `tb_user` (
 --
 
 --
--- Indeks untuk tabel `tb_admin`
+-- Indexes for table `tb_admin`
 --
 ALTER TABLE `tb_admin`
   ADD PRIMARY KEY (`id_admin`);
 
 --
--- Indeks untuk tabel `tb_barang`
+-- Indexes for table `tb_barang`
 --
 ALTER TABLE `tb_barang`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tb_kabupaten`
+-- Indexes for table `tb_kabupaten`
 --
 ALTER TABLE `tb_kabupaten`
   ADD PRIMARY KEY (`id_kab`);
 
 --
--- Indeks untuk tabel `tb_kategori`
+-- Indexes for table `tb_kategori`
 --
 ALTER TABLE `tb_kategori`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tb_log_modal_awal`
+-- Indexes for table `tb_log_modal_awal`
 --
 ALTER TABLE `tb_log_modal_awal`
   ADD PRIMARY KEY (`idLog`);
 
 --
--- Indeks untuk tabel `tb_log_shift`
+-- Indexes for table `tb_log_shift`
 --
 ALTER TABLE `tb_log_shift`
   ADD PRIMARY KEY (`idLog`);
 
 --
--- Indeks untuk tabel `tb_modal_awal`
+-- Indexes for table `tb_modal_awal`
 --
 ALTER TABLE `tb_modal_awal`
   ADD PRIMARY KEY (`idModal`);
 
 --
--- Indeks untuk tabel `tb_opname`
+-- Indexes for table `tb_opname`
 --
 ALTER TABLE `tb_opname`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tb_provinsi`
+-- Indexes for table `tb_provinsi`
 --
 ALTER TABLE `tb_provinsi`
   ADD PRIMARY KEY (`id_prov`);
 
 --
--- Indeks untuk tabel `tb_rak`
+-- Indexes for table `tb_rak`
 --
 ALTER TABLE `tb_rak`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tb_satuan`
+-- Indexes for table `tb_satuan`
 --
 ALTER TABLE `tb_satuan`
   ADD PRIMARY KEY (`idSatuan`);
 
 --
--- Indeks untuk tabel `tb_supplier`
+-- Indexes for table `tb_supplier`
 --
 ALTER TABLE `tb_supplier`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tb_toko`
+-- Indexes for table `tb_toko`
 --
 ALTER TABLE `tb_toko`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tb_user`
+-- Indexes for table `tb_user`
 --
 ALTER TABLE `tb_user`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `tb_admin`
+-- AUTO_INCREMENT for table `tb_admin`
 --
 ALTER TABLE `tb_admin`
   MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `tb_barang`
+-- AUTO_INCREMENT for table `tb_barang`
 --
 ALTER TABLE `tb_barang`
   MODIFY `id` bigint(100) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `tb_kategori`
+-- AUTO_INCREMENT for table `tb_kategori`
 --
 ALTER TABLE `tb_kategori`
   MODIFY `id` bigint(100) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `tb_log_modal_awal`
+-- AUTO_INCREMENT for table `tb_log_modal_awal`
 --
 ALTER TABLE `tb_log_modal_awal`
   MODIFY `idLog` bigint(100) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `tb_log_shift`
+-- AUTO_INCREMENT for table `tb_log_shift`
 --
 ALTER TABLE `tb_log_shift`
   MODIFY `idLog` bigint(100) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `tb_modal_awal`
+-- AUTO_INCREMENT for table `tb_modal_awal`
 --
 ALTER TABLE `tb_modal_awal`
   MODIFY `idModal` bigint(100) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `tb_opname`
+-- AUTO_INCREMENT for table `tb_opname`
 --
 ALTER TABLE `tb_opname`
   MODIFY `id` bigint(100) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `tb_rak`
+-- AUTO_INCREMENT for table `tb_rak`
 --
 ALTER TABLE `tb_rak`
   MODIFY `id` bigint(100) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `tb_satuan`
+-- AUTO_INCREMENT for table `tb_satuan`
 --
 ALTER TABLE `tb_satuan`
   MODIFY `idSatuan` bigint(100) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `tb_supplier`
+-- AUTO_INCREMENT for table `tb_supplier`
 --
 ALTER TABLE `tb_supplier`
   MODIFY `id` bigint(100) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `tb_toko`
+-- AUTO_INCREMENT for table `tb_toko`
 --
 ALTER TABLE `tb_toko`
   MODIFY `id` bigint(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT untuk tabel `tb_user`
+-- AUTO_INCREMENT for table `tb_user`
 --
 ALTER TABLE `tb_user`
   MODIFY `id` bigint(100) NOT NULL AUTO_INCREMENT;
