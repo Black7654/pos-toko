@@ -1,5 +1,5 @@
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800 "><span class="fas fa-fw fa-th-list"></span>&nbspDetail Transaksi</h1>
+    <!-- <h1 class="h3 mb-0 text-gray-800 "><span class="fas fa-fw fa-th-list"></span>&nbspDetail Transaksi</h1> -->
 </div>
 
 <!-- ini tabel -->
@@ -70,7 +70,7 @@
      <div class="modal-dialog modal-xl">
          <div class="modal-content">
              <div class="modal-header">
-                 <h5 class="modal-title" id="exampleModalLabel"> <span class="fa fa-th-list"></span>&nbsp&nbspForm Detail Transaksi</h5>
+                 <h5 class="modal-title" id="exampleModalLabel"> <span class="fa fa-th-list"></span>&nbsp&nbspTambahkan Detail Transaksi</h5>
                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                      <span aria-hidden="true">&times;</span>
                  </button>
@@ -153,7 +153,7 @@
             </div>
             <div class="modal-footer">
                 <button type="submit" class="btn btn-success"><span class="fa fa-save"></span>&nbspSimpan</button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="fa fa-times"></span>&nbspClose</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="fa fa-times"></span>&nbspBatal</button>
             </div>
             </form>
              </div>
@@ -252,7 +252,7 @@
             </div>
             <div class="modal-footer">
                 <button type="submit" class="btn btn-success"><span class="fa fa-save"></span>&nbspSimpan</button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="fa fa-times"></span>&nbspClose</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="fa fa-times"></span>&nbspBatal</button>
             </div>
             </form>
              </div>
