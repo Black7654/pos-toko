@@ -60,7 +60,7 @@ class Kategori extends CI_Controller
                     <!-- end content modal -->
             
             <div class="modal-footer">
-                <button type="submit" class="btn btn-primary"><span class="fa fa-save"></span>&nbspSimpan</button>
+                <button type="submit" class="btn btn-success"><span class="fa fa-save"></span>&nbspSimpan</button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="fa fa-times"></span>&nbspClose</button>
             </div>
             </form>
