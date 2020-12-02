@@ -28,6 +28,7 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <img src="assets/img/profile/profile.jpg" class="img-thumbnail rounded-circle">
+                        <input type="file" class="form-control" name="foto_profil" id="foto_profil" accept="image/jpg, image/jpeg" placeholder="Upload Foto" required>
                     </div>
 
                     
@@ -38,12 +39,12 @@
                         <div class="col">
 
                             <div class="form-group">
-                                <input type="hidden" class="form-control" placeholder="No">
+                                <input type="hidden" class="form-control" value="No">
                             </div>
 
                             <div class="form-group">
                                 <label for="">Username</label>
-                                <input type="text" class="form-control" placeholder="Username">
+                                <input type="text" class="form-control" value="Username">
                             </div>
 
                         </div>

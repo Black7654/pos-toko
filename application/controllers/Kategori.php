@@ -29,7 +29,7 @@ class Kategori extends CI_Controller
 
         echo '
         <!-- content modal -->
-                <form action="<?php echo base_url(); ?>kelas/simpan" enctype="multipart/form-data" method="POST">
+                <form action="<?php echo base_url(); ?>kategori/simpan" enctype="multipart/form-data" method="POST">
                 <div class="form-group">
                     <div class="row">
                     
