@@ -1,5 +1,5 @@
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800"><span class="fas fa-fw fa-users"></span>&nbspSupplier</h1>
+<!--     <h1 class="h3 mb-0 text-gray-800"><span class="fas fa-fw fa-users"></span>&nbspSupplier</h1> -->
 </div>
 
 <!-- ini tabel -->
@@ -28,7 +28,7 @@
                         <th class="text-center">Alamat</th>
                         <th class="text-center">Telpon</th>
                         <th class="text-center">Status</th>
-                        <th class="text-center">Action</th>
+                        <th class="text-center">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -66,7 +66,7 @@
      <div class="modal-dialog modal-xl">
          <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"> <span class="fa fa-users"></span>&nbsp&nbspForm Supplier</h5>
+                <h5 class="modal-title" id="exampleModalLabel"> <span class="fa fa-users"></span>&nbsp&nbspTambahkan Supplier</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -159,7 +159,7 @@
             </div>
             <div class="modal-footer">
                 <button type="submit" class="btn btn-success"><span class="fa fa-save"></span>&nbspSimpan</button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="fa fa-times"></span>&nbspClose</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="fa fa-times"></span>&nbspBatal</button>
             </div>
             </form>
         </div>
@@ -265,7 +265,7 @@
             </div>
             <div class="modal-footer">
                 <button type="submit" class="btn btn-success"><span class="fa fa-save"></span>&nbspSimpan</button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="fa fa-times"></span>&nbspClose</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="fa fa-times"></span>&nbspBatal</button>
             </div>
             </form>
         </div>

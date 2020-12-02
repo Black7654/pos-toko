@@ -21,7 +21,7 @@
 
  <!-- Heading -->
  <div class="sidebar-heading">
-     Admin Navigation
+     Navigasi Anda
  </div>
 
  <!-- Nav Item - Pages Collapse Menu -->
