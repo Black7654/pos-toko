@@ -159,7 +159,7 @@
                             </div>
                         </div>
                     </div> -->
-                        <button class="btn btn-success btn-user btn-block" type="submit" id="simpan"><span class="fa fa-sign-out-alt"></span>&nbspDAFTAR SEKARANG</button>
+                        <button class="btn btn-success btn-user btn-block" type="submit" id="simpan"><span class="fa fa-sign-in-alt"></span>&nbspDAFTAR SEKARANG</button>
 					</form>
 					<hr>
 					<!-- <div class="text-center">
