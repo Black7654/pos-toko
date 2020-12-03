@@ -6,7 +6,9 @@ class Toko extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        if(!$this->session->userdata('logged_in')) {redirect('login','refresh');}
+        if (!$this->session->userdata('logged_in')) {
+            redirect('login', 'refresh');
+        }
         $this->load->model("TokoModel");
         $this->load->library('template');
     }
@@ -31,21 +33,6 @@ class Toko extends CI_Controller
             // var_dump($this->upload->display_errors());
         } else {
             return $this->upload->data('file_name');
-        }
-    }
-
-    public function _delImg($id_user, $jenis)
-    {
-        if ($jenis == 'tb_user') { //hapus data file di tb_user
-            $userdata = $this->TokoModel->get_where($jenis, array('id_user' => $id_user))->row();
-            $imagektp = $userdata->ktp;
-            $imagefoto = $userdata->foto;
-            if (($imagektp != null) && ($imagefoto != null)) {
-                unlink('./upload/foto/' . $imagefoto);
-                return true;
-            } else {
-                return false;
-            }
         }
     }
 
@@ -282,10 +269,30 @@ class Toko extends CI_Controller
     }
 
 
-    public function delete($id)
+    public function delete()
     {
-        $delete = $this->TokoModel->deleteData('tb_toko', array('id' => $id));
+        $id = $this->uri->segment(3);
+        $data = $this->TokoModel->getByID($id);
+        $result = $data->row();
+        if (!empty($result->foto_profil)) {
+            $path = (APPPATH . '../upload/foto/');
+            $hapus = unlink($path . $result->foto_profil);
+            if ($hapus) {
+                $delete = $this->TokoModel->deleteData('tb_toko', array('id' => $id));
+                $this->session->set_flashdata('DANGER', "Data berhasil di Hapus");
+                redirect('toko');
+            }
+        } else {
+            $id = $this->uri->segment(3);
+            $delete = $this->TokoModel->deleteData('tb_toko', array('id' => $id));
+            $this->session->set_flashdata('DANGER', "Data berhasil di Hapus");
+            redirect('toko');
+        }
+    }
+    public function aktifasi($idToko)
+    {
+        $data = $this->TokoModel->updateAktif($idToko);
         redirect('toko');
-        return $delete;
+        return $data;
     }
 }

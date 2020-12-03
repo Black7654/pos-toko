@@ -11,7 +11,7 @@ class TokoModel extends CI_Model
 
     public function getById($id)
     {
-        $data = $this->db->where('id', $id);
+        $data = $this->db->where('idToko', $id);
         $data = $this->db->get('tb_toko');
         return $data;
     }
@@ -20,6 +20,10 @@ class TokoModel extends CI_Model
     {
         $data = $this->db->get_where($tabel, array($col => $id));
         return $data->result();
+    }
+    public function get_where($table, $where)
+    {
+        return $this->db->get_where($table, $where);
     }
 
     public function getDataTerakhir($tabel, $id)
@@ -38,6 +42,16 @@ class TokoModel extends CI_Model
     {
         $data = $this->db->update($tabel, $data, $where);
         return $data;
+    }
+    function updateAktif($idToko)
+    {
+        $exp_date =  date('Y-m-d', strtotime('+30 days', strtotime(date('Y-m-d'))));
+        $data = array(
+            'is_aktif' => 'yes',
+            'exp_date' => $exp_date
+        );
+        $this->db->where('idToko', $idToko);
+        $this->db->update('tb_toko', $data);
     }
 
     public function deleteData($tabel, $where)

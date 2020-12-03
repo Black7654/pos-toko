@@ -43,14 +43,6 @@ class LoginModel extends CI_Model
 		$this->db->where('idToko', $idToko);
 		$this->db->update('tb_toko', $data);
 	}
-	function updateIsAktif($idToko)
-	{
-		$data = array(
-			'is_aktif' => 'no',
-		);
-		$this->db->where('idToko', $idToko);
-		$this->db->update('tb_toko', $data);
-	}
 
 	//mencari id user dari email dan password
 
@@ -58,6 +50,12 @@ class LoginModel extends CI_Model
 	{
 		$data = $this->db->where('email', $email);
 		$data = $this->db->where('password', md5($pass));
+		$data = $this->db->get('tb_toko');
+		return $data;
+	}
+	function GetIdaktif($id)
+	{
+		$data = $this->db->where('idToko', $id);
 		$data = $this->db->get('tb_toko');
 		return $data;
 	}

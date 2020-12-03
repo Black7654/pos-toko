@@ -26,13 +26,6 @@
          Navigasi Anda
      </div>
 
-     <!-- Nav Item - Pages Collapse Menu -->
-     <!-- <li class="nav-item">
-     <a class="nav-link" href="<?php echo base_url(); ?>toko">
-         <i class="fas fa-fw fa-store"></i>
-         <span>Toko</span></a>
- </li> -->
-
      <!-- Transaksi -->
      <li class="nav-item">
          <a class="nav-link" href="<?php echo base_url(); ?>transaksi">
@@ -134,17 +127,10 @@
      </div>
 
      <!-- Nav Item - Pages Collapse Menu -->
-     <!-- <li class="nav-item">
-     <a class="nav-link" href="<?php echo base_url(); ?>toko">
-         <i class="fas fa-fw fa-store"></i>
-         <span>Toko</span></a>
- </li> -->
-
-     <!-- Transaksi -->
      <li class="nav-item">
-         <a class="nav-link" href="<?php echo base_url(); ?>transaksi">
-             <i class="fas fa-fw fa-sync-alt"></i>
-             <span>Transaksi</span></a>
+         <a class="nav-link" href="<?php echo base_url(); ?>toko">
+             <i class="fas fa-fw fa-store"></i>
+             <span>Toko</span></a>
      </li>
 
 
