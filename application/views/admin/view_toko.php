@@ -1,7 +1,20 @@
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800"><span class="fas fa-fw fa-store"></span>&nbspToko</h1>
 </div>
-
+<?php if ($this->session->flashdata('SUCCESS')) { ?>
+    <div class="alert alert-success alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <h4><i class="icon fa fa-check"></i> Success!</h4>
+        <?= $this->session->flashdata('SUCCESS') ?>
+    </div>
+<?php } ?>
+<?php if ($this->session->flashdata('DANGER')) { ?>
+    <div class="alert alert-success alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <h4><i class="icon fa fa-check"></i> Success!</h4>
+        <?= $this->session->flashdata('DANGER') ?>
+    </div>
+<?php } ?>
 <!-- ini tabel -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
@@ -62,7 +75,7 @@
                                     <!-- <a class="fa fa-edit" href="" data-toggle="modal" data-target="#exampleModal2" onclick="edit('<?php echo $row->id; ?>')"></a> -->
                                     <a class="btn btn-success" href="<?php echo base_url(); ?>toko/aktifasi/<?php echo $row->idToko; ?>" onclick="return confirm('Yakin Akan Mengaktifkan Akun Ini Kembali?')"><i class="fa fa-check"></i></a>
                                     &nbsp||&nbsp
-                                    <a class="btn btn-danger" href="<?php echo base_url(); ?>toko/delete/<?php echo $row->id; ?> " onclick="return confirm('Yakin Akan Menghapus?')"><i class="fa fa-trash"></i></a>
+                                    <a class="btn btn-danger" href="<?php echo base_url(); ?>toko/delete/<?php echo $row->idToko; ?> " onclick="return confirm('Yakin Akan Menghapus?')"><i class="fa fa-trash"></i></a>
 
                                 </td>
 
@@ -79,26 +92,10 @@
 
 
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"><span class="fa fa-edit"></span>&nbsp&nbspEdit Data Toko</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body" id="edit_admin">
-                <!-- content modal -->
 
-            </div>
-        </div>
-    </div>
-</div>
 <script src="<?php echo base_url() . 'assets/'; ?>toko/formtoko.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     function edit(id) {
         var id = id;
         $.ajax({
@@ -110,4 +107,4 @@
             }
         });
     }
-</script>
+</script> -->

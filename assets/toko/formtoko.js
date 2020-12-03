@@ -1,3 +1,3 @@
 $(document).ready(function() {
-    $('.search').select2();
+    $('.js-example-basic-single').select2();
 });

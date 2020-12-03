@@ -271,27 +271,30 @@ class Toko extends CI_Controller
 
     public function delete()
     {
-        $id = $this->uri->segment(3);
-        $data = $this->TokoModel->getByID($id);
+        $idToko = $this->uri->segment(3);
+        $data = $this->TokoModel->getByID($idToko);
         $result = $data->row();
         if (!empty($result->foto_profil)) {
             $path = (APPPATH . '../upload/foto/');
             $hapus = unlink($path . $result->foto_profil);
             if ($hapus) {
-                $delete = $this->TokoModel->deleteData('tb_toko', array('id' => $id));
+                //echo "berhasil hapus foto";
+                $delete = $this->TokoModel->deleteData('tb_toko', array('idToko' => $idToko));
                 $this->session->set_flashdata('DANGER', "Data berhasil di Hapus");
                 redirect('toko');
             }
         } else {
-            $id = $this->uri->segment(3);
-            $delete = $this->TokoModel->deleteData('tb_toko', array('id' => $id));
+            $idToko = $this->uri->segment(3);
+            $delete = $this->TokoModel->deleteData('tb_toko', array('idToko' => $idToko));
             $this->session->set_flashdata('DANGER', "Data berhasil di Hapus");
             redirect('toko');
+            //echo "berhasil hapus data";
         }
     }
     public function aktifasi($idToko)
     {
         $data = $this->TokoModel->updateAktif($idToko);
+        $this->session->set_flashdata('SUCCESS', "Data berhasil di aktifkan kembali");
         redirect('toko');
         return $data;
     }
