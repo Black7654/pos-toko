@@ -63,7 +63,7 @@
            		    	<input type="password" name="password" class="input">
             	   </div>
 				</div>
-				<button type="submit" class="btn btn-success"><span class="fa fa-sign-out-alt"></span>&nbspLogin</button>
+				<button type="submit" class="btn btn-success"><span class="fa fa-sign-in-alt"></span>&nbspLogin</button>
 				<hr>
 				<a class="text-center" href="<?php echo base_url(); ?>login/register"><h6>Belum Punya Akun? Klik Disini Untuk Daftar</h6></a>
 				

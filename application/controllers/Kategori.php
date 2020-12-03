@@ -29,7 +29,7 @@ class Kategori extends CI_Controller
 
         echo '
         <!-- content modal -->
-                <form action="<?php echo base_url(); ?>kelas/simpan" enctype="multipart/form-data" method="POST">
+                <form action="<?php echo base_url(); ?>kategori/simpan" enctype="multipart/form-data" method="POST">
                 <div class="form-group">
                     <div class="row">
                     
@@ -60,7 +60,7 @@ class Kategori extends CI_Controller
                     <!-- end content modal -->
             
             <div class="modal-footer">
-                <button type="submit" class="btn btn-primary"><span class="fa fa-save"></span>&nbspSimpan</button>
+                <button type="submit" class="btn btn-success"><span class="fa fa-save"></span>&nbspSimpan</button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="fa fa-times"></span>&nbspClose</button>
             </div>
             </form>

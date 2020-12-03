@@ -31,25 +31,27 @@
                 </thead>
                 <tbody>
                     <?php
-                    // if (is_array($data)) {
-                    //     $no = 0;
-                    //     foreach ($data as $row) {
-                    //         $no++; ?>
+                    if (is_array($data)) {
+                        $no = 0;
+                        foreach ($data as $row) {
+                            $no++; ?>
                             <tr>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
+                                <td class="text-center"><?php echo $no; ?></td>
+                                <td class="text-center"><?php echo $row->id; ?></td>
+                                <td class="text-center"><?php echo $row->idToko; ?></td>
+                                <td class="text-center"><?php echo $row->idRak; ?></td>
+                                <td class="text-center"><?php echo $row->nama_rak; ?></td>
+                                <td class="text-center"><?php echo $row->aktif; ?></td>
                                 <td class="text-center">
-                                    <a class="fa fa-edit" href="" data-toggle="modal" data-target="#exampleModal2"></a>
+                                    <a class="fa fa-edit" href="" data-toggle="modal" data-target="#exampleModal2" onclick="edit('<?php echo $row->id; ?>')"></a>
                                     &nbsp||&nbsp
-                                    <a class="fa fa-trash" href="#" ></a>                              
+                                    <a class="fa fa-trash" href="<?php echo base_url(); ?>rak/delete/<?php echo $row->id; ?>"></a>
                                 </td>
 
                             </tr>
-            
+                    <?php }
+                    }
+                    ?>
                 </tbody>
             </table>
         </div>
@@ -68,7 +70,7 @@
              </div>
              <div class="modal-body">
                  <!-- content modal -->
-                 <form action="#" enctype="multipart/form-data" method="POST">
+                 <form action="<?php echo base_url();?>rak/simpan" enctype="multipart/form-data" method="POST">
                     <input type="hidden" class="form-control" id="id_admin" name="id_admin">
                     
                     <div class="container">

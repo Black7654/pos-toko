@@ -31,26 +31,29 @@
 		<div class="row">
 			<div class="col-lg">
 				<div class="p-5">
+
 					<div class="text-center">
-						<h1 class="h1 text-gray-900 mb-4"><u><span class="fa fa-edit"></span>&nbspDaftar Akun Baru<u></h1>
-					</div>
+                    <h2 class="title text-success"><b><span class="fa fa-edit "></span>&nbspBUAT AKUN BARU</b></h2>
+                    <hr class="mr-auto">
+                    </div>
+                    
 					<form enctype="multipart/form-data" action="<?php echo base_url(); ?>login/simpan" method="POST">
 
                     <input type="hidden" class="form-control" id="id" name="id">
 
                     <div class="col-md">
-                        <input type="hidden" class="form-control" id="idtoko" name="idtoko" placeholder="Masukkan ID Toko">
+                        <input type="hidden" class="form-control" id="idtoko" name="idtoko" placeholder="Masukkan ID Toko Anda">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mt-5">
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="exampleInputPassword1">E - Mail</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan E-mail Anda">
                             </div>
 
                             <div class="col-md-6">
                                 <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan Password">
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan Password Anda">
                             </div>
 
                         </div>
@@ -59,12 +62,12 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="exampleInputPassword1">Nama Toko</label>
-                                <input type="text" class="form-control" id="nama_toko" name="nama_toko" placeholder="Masukkan Nama Toko">
+                                <input type="text" class="form-control" id="nama_toko" name="nama_toko" placeholder="Masukkan Nama Toko Anda">
                             </div>
 
                             <div class="col-md-6">
-                                <label for="exampleInputPassword1">Pemilik</label>
-                                <input type="text" class="form-control" id="pemilik" name="pemilik" placeholder="Masukkan Pemilik">
+                                <label for="exampleInputPassword1">Nama Pemilik</label>
+                                <input type="text" class="form-control" id="pemilik" name="pemilik" placeholder="Masukkan Nama Pemilik">
                             </div>
                         </div>
                     </div>
@@ -156,7 +159,7 @@
                             </div>
                         </div>
                     </div> -->
-                        <button class="btn btn-success btn-user btn-block" type="submit" id="simpan">Daftar Sekarang</button>
+                        <button class="btn btn-success btn-user btn-block" type="submit" id="simpan"><span class="fa fa-sign-in-alt"></span>&nbspDAFTAR SEKARANG</button>
 					</form>
 					<hr>
 					<!-- <div class="text-center">
