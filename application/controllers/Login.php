@@ -49,6 +49,7 @@ class Login extends CI_Controller
                 // var_dump($data);
                 // menyimpan session
                 $this->session->set_userdata($data);
+                $this->LoginModel->updateIsLogin($idToko);
                 $this->session->set_flashdata('SUCCESS', 'Berhasil Login. Selamat Datang Di POS-KITA');
                 redirect('dashboard');
                 // jika status is aktif no 

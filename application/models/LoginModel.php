@@ -34,6 +34,15 @@ class LoginModel extends CI_Model
 		}
 	}
 
+	function updateIsAktif($idToko)
+	{
+		$data = array(
+			'is_aktif' => 'no'
+		);
+		$this->db->where('idToko', $idToko);
+		$this->db->update('tb_toko', $data);
+	}
+
 	function updateIsLogin($idToko)
 	{
 		$data = array(
