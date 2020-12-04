@@ -1,5 +1,6 @@
  <!-- Sidebar Toggle (Topbar) -->
  <?php if ($this->session->userdata('akses') == 'user') { ?>
+  <h5>ID Toko Anda : <?php echo $this->session->userdata('idToko'); ?></h5>
    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
      <i class="fa fa-bars"></i>
    </button>
