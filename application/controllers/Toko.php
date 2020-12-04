@@ -10,7 +10,6 @@ class Toko extends CI_Controller
             redirect('login', 'refresh');
         }
         $this->load->model("TokoModel");
-        $this->load->library('template');
     }
     public function index()
     {
@@ -136,10 +135,8 @@ class Toko extends CI_Controller
         return $edit;
     }
 
-    public function edit($data)
+    public function edit()
     {
-
-        $this->template->display_admin('admin/view_edit_admin.php', $data);
         $id = $this->input->post('id', true);
         $data = $this->TokoModel->getById($id);
         $result = $data->row();

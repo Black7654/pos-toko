@@ -72,6 +72,7 @@
                                 <td class="text-center"><?php echo $row->exp_date; ?></td> -->
                                 <td class="text-center">
 
+
                                     <!-- <a class="fa fa-edit" href="" data-toggle="modal" data-target="#exampleModal2" onclick="edit('<?php echo $row->id; ?>')"></a> -->
                                     <a class="btn btn-success" href="<?php echo base_url(); ?>toko/aktifasi/<?php echo $row->idToko; ?>" onclick="return confirm('Yakin Akan Mengaktifkan Akun Ini Kembali?')"><i class="fa fa-check"></i></a>
                                     &nbsp||&nbsp
@@ -90,12 +91,28 @@
 </div>
 <!-- end tabel -->
 
+<!-- Modal -->
+<div class="modal fade bd-example-modal-xl" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> <span class="fa fa-edit"></span>&nbsp&nbspForm Edit Data Toko</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="edit_Toko">
+
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
 <script src="<?php echo base_url() . 'assets/'; ?>toko/formtoko.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
-<!-- <script type="text/javascript">
+<script type="text/javascript">
     function edit(id) {
         var id = id;
         $.ajax({
@@ -103,8 +120,8 @@
             data: 'id=' + id,
             url: '<?php echo base_url(); ?>toko/edit/',
             success: function(data) {
-                $('#edit_admin').html(data);
+                $('#edit_Toko').html(data);
             }
         });
     }
-</script> -->
+</script>

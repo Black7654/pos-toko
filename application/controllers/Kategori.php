@@ -6,7 +6,7 @@ class Kategori extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        $this->load->model("KategoriModel");
+        $this->load->model('KategoriModel');
         $this->load->library('template');
     }
     public function index()
@@ -29,25 +29,25 @@ class Kategori extends CI_Controller
 
         echo '
         <!-- content modal -->
-                <form action="<?php echo base_url(); ?>kategori/update" enctype="multipart/form-data" method="POST">
+                <form action="kategori/update" enctype="multipart/form-data" method="POST">
                 <div class="form-group">
                     <div class="row">
                     
                         <div class="col-md-6">
                             <label for="exampleInputNamaKelas1">ID Toko</label>
-                            <input type="text" class="form-control" id="idToko" name="idToko" value=' . $result->idToko. ' /readonly>
+                            <input type="text" class="form-control" id="idToko" name="idToko" value=' . $result->idToko . ' /readonly>
                         </div>
 
                         <div class="col-md-6">
                             <label for="exampleInputNamaKelas1">ID Kategori</label>
-                            <input type="text" class="form-control" id="idKat" name="idKat" value=' . $result->idKat. ' /readonly>
+                            <input type="text" class="form-control" id="idKat" name="idKat" value=' . $result->idKat . ' /readonly>
                         </div>
 
                     </div>
                 </div>
                     <div class="form-group">
                         <label for="exampleInputNamaKelas1">Nama</label>
-                        <input type="text" class="form-control" id="nama" name="nama" value=' . $result->nama. '>
+                        <input type="text" class="form-control" id="nama" name="nama" value=' . $result->nama . '>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputAktif1">Status</label>
@@ -74,8 +74,8 @@ class Kategori extends CI_Controller
         $is_aktif = $this->input->post('is_aktif');
 
         $data = array(
-            'idToko' => $idToko, 
-            'idKat' => $idKat, 
+            'idToko' => $idToko,
+            'idKat' => $idKat,
             'nama' => $nama,
             'is_aktif' => $is_aktif
 
@@ -85,23 +85,27 @@ class Kategori extends CI_Controller
         redirect('kategori');
         return $simpan;
     }
-    public function update(){
-    	$nama = $this->input->post('nama');
+    public function update()
+    {
+        $idToko = $this->input->post('idToko');
+        $idKat = $this->input->post('idKat');
+        $nama = $this->input->post('nama');
         $is_aktif = $this->input->post('is_aktif');
         $data = array(
-        	'nama' => $nama ,
-        	'is_aktif'=>$is_aktif 
+            'idToko' => $idToko,
+            'idKat' => $idKat,
+            'nama' => $nama,
+            'is_aktif' => $is_aktif
         );
-        $update = $this->KategoriModel->updateData('tb_kategori', $data);
+        $update = $this->KategoriModel->updateData('tb_kategori', $data, array('idToko' => $idToko));
         redirect('kategori');
         return $update;
-
     }
 
     public function delete($id)
     {
         $deleteKategori = $this->KategoriModel->deleteData('tb_kategori', array('id' => $id));
         redirect('kategori');
-        return $delete;
+        return $deleteKategori;
     }
 }

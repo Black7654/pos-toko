@@ -30,6 +30,7 @@ class Login extends CI_Controller
             $idToko = $dataUser->idToko;
             $pemilik = $dataUser->pemilik;
             $exp_date = $dataUser->exp_date;
+            $foto_profil = $dataUser->foto_profil;
 
             // jika tanggal sekarang sama dengan tanggal expired
             if ($tgl_now >= $exp_date) {
@@ -43,6 +44,7 @@ class Login extends CI_Controller
                     'idToko' => $idToko,
                     'pemilik' => $pemilik,
                     'exp_date' => $exp_date,
+                    'foto_profil' => $foto_profil,
                     'akses' => 'user',
                     'logged_in' => true
                 );

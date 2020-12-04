@@ -11,7 +11,7 @@ class TokoModel extends CI_Model
 
     public function getById($id)
     {
-        $data = $this->db->where('idToko', $id);
+        $data = $this->db->where('id', $id);
         $data = $this->db->get('tb_toko');
         return $data;
     }

@@ -1,6 +1,6 @@
  <!-- Sidebar Toggle (Topbar) -->
  <?php if ($this->session->userdata('akses') == 'user') { ?>
-  <h5>ID Toko Anda : <?php echo $this->session->userdata('idToko'); ?></h5>
+   <h5>ID Toko Anda : <?php echo $this->session->userdata('idToko'); ?></h5>
    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
      <i class="fa fa-bars"></i>
    </button>
@@ -37,7 +37,7 @@
      <li class="nav-item dropdown no-arrow">
        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          <span class="mr-2 ml-auto d-none d-lg-inline text-gray-600 small"><?php echo $this->session->userdata('pemilik'); ?></span>
-         <img class="img-profile rounded-circle" src="assets/img/profile/profile.jpg">
+         <img class="img-profile rounded-circle" src="upload/foto/<?php echo $this->session->userdata('foto_profil'); ?>">
        </a>
        <!-- Dropdown - User Information -->
        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">

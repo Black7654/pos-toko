@@ -73,10 +73,10 @@
                 <!-- content modal -->
                 <form action="<?php echo base_url(); ?>kategori/simpan" enctype="multipart/form-data" method="POST">
                     <div class="form-group">
-                                <label for="exampleInputNamaKelas1">ID Toko</label>
-                                <input type="text" class="form-control" id="idToko" name="idToko" value="<?php echo $this->session->userData('idToko');?>" readonly>
-                                <input type="hidden" class="form-control" id="idKat" name="idKat" value="" readonly>
-                            
+                        <label for="exampleInputNamaKelas1">ID Toko</label>
+                        <input type="text" class="form-control" id="idToko" name="idToko" value="<?php echo $this->session->userData('idToko'); ?>" readonly>
+                        <input type="hidden" class="form-control" id="idKat" name="idKat" value="" readonly>
+
                     </div>
 
 
@@ -115,7 +115,7 @@
                 </button>
             </div>
             <div class="modal-body" id="edit_kategori">
-                
+
             </div>
         </div>
     </div>
@@ -126,7 +126,7 @@
         $.ajax({
             type: 'POST',
             data: 'id=' + id,
-            url: '<?php echo base_url(); ?>kategori/edit',
+            url: '<?php echo base_url(); ?>kategori/edit/',
             success: function(data) {
                 $('#edit_kategori').html(data);
             }
