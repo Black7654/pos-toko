@@ -19,7 +19,7 @@ class Kategori extends CI_Controller
         $id = $this->input->post('id', true);
         $data = $this->KategoriModel->getById($id);
         $result = $data->row();
-        if (!(strcmp($result->aktif, "yes"))) {
+        if (!(strcmp($result->is_aktif, "yes"))) {
             $aktif = "selected";
             $tidak = "";
         } else {
@@ -29,7 +29,7 @@ class Kategori extends CI_Controller
 
         echo '
         <!-- content modal -->
-                <form action="<?php echo base_url(); ?>kategori/simpan" enctype="multipart/form-data" method="POST">
+                <form action="<?php echo base_url(); ?>kategori/update" enctype="multipart/form-data" method="POST">
                 <div class="form-group">
                     <div class="row">
                     
@@ -40,7 +40,7 @@ class Kategori extends CI_Controller
 
                         <div class="col-md-6">
                             <label for="exampleInputNamaKelas1">ID Kategori</label>
-                            <input type="text" class="form-control" id="id" name="id" value=' . $result->idKat. ' /readonly>
+                            <input type="text" class="form-control" id="idKat" name="idKat" value=' . $result->idKat. ' /readonly>
                         </div>
 
                     </div>
@@ -51,7 +51,7 @@ class Kategori extends CI_Controller
                     </div>
                     <div class="form-group">
                         <label for="exampleInputAktif1">Status</label>
-                        <select class="form-control" name="aktif" id="aktif">
+                        <select class="form-control" name="is_aktif" id="is_aktif">
                             <option value="yes" ' . $aktif . '>Yes</option>
                             <option value="no" ' . $tidak . '>No</option>
                         </select>
@@ -68,24 +68,34 @@ class Kategori extends CI_Controller
     }
     public function simpan()
     {
-        $id = 'ID' . random_string('numeric', 12);  //name=""
         $idToko = 'TOKO' . random_string('numeric', 12);  //name=""
         $idKat = 'KAT' . random_string('numeric', 12);  //name=""
         $nama = $this->input->post('nama');
-        $aktif = $this->input->post('aktif');
+        $is_aktif = $this->input->post('is_aktif');
 
         $data = array(
-            'id' => $id, //Database
             'idToko' => $idToko, 
             'idKat' => $idKat, 
             'nama' => $nama,
-            'aktif' => $aktif
+            'is_aktif' => $is_aktif
 
         );
 
         $simpan = $this->KategoriModel->simpanData('tb_kategori', $data);
         redirect('kategori');
         return $simpan;
+    }
+    public function update(){
+    	$nama = $this->input->post('nama');
+        $is_aktif = $this->input->post('is_aktif');
+        $data = array(
+        	'nama' => $nama ,
+        	'is_aktif'=>$is_aktif 
+        );
+        $update = $this->KategoriModel->updateData('tb_kategori', $data);
+        redirect('kategori');
+        return $update;
+
     }
 
     public function delete($id)

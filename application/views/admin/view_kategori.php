@@ -21,10 +21,10 @@
                 <thead>
                     <tr>
                         <th class="text-center">NO</th>
-                        <th class="text-center">ID</th>
-                        <th class="text-center">ID Toko</th>
+                        <!-- <th class="text-center">ID</th> -->
+                        <!-- <th class="text-center">ID Toko</th> -->
                         <th class="text-center">ID Kategori</th>
-                        <th class="text-center">Nama</th>
+                        <th class="text-center">Nama Kategori</th>
                         <th class="text-center">Aktif</th>
                         <th class="text-center">Action</th>
                     </tr>
@@ -37,11 +37,11 @@
                             $no++; ?>
                             <tr>
                                 <td class="text-center"><?php echo $no; ?></td>
-                                <td class="text-center"><?php echo $row->id; ?></td>
-                                <td class="text-center"><?php echo $row->idToko; ?></td>
+                                <!-- <td class="text-center"><?php echo $row->id; ?></td> -->
+                                <!-- <td class="text-center"><?php echo $row->idToko; ?></td> -->
                                 <td class="text-center"><?php echo $row->idKat; ?></td>
                                 <td class="text-center"><?php echo $row->nama; ?></td>
-                                <td class="text-center"><?php echo $row->aktif; ?></td>
+                                <td class="text-center"><?php echo $row->is_aktif; ?></td>
                                 <td class="text-center">
                                     <a class="fa fa-edit" href="" data-toggle="modal" data-target="#exampleModal2" onclick="edit('<?php echo $row->id; ?>')"></a>
                                     &nbsp||&nbsp
@@ -73,18 +73,10 @@
                 <!-- content modal -->
                 <form action="<?php echo base_url(); ?>kategori/simpan" enctype="multipart/form-data" method="POST">
                     <div class="form-group">
-                        <div class="row">
-                            
-                            <div class="col-md-6">
                                 <label for="exampleInputNamaKelas1">ID Toko</label>
-                                <input type="text" class="form-control" id="idToko" name="idToko" value="" /readonly>
-                            </div>
-
-                            <div class="col-md-6">
-                                <label for="exampleInputNamaKelas1">ID Kategori</label>
-                                <input type="text" class="form-control" id="id" name="id" value="<?php echo $this->session->userData('id');?>" /readonly>
-                            </div>
-                        </div>
+                                <input type="text" class="form-control" id="idToko" name="idToko" value="<?php echo $this->session->userData('idToko');?>" readonly>
+                                <input type="hidden" class="form-control" id="idKat" name="idKat" value="" readonly>
+                            
                     </div>
 
 
@@ -94,7 +86,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputAktif1">Status</label>
-                        <select class="form-control" name="aktif" id="aktif">
+                        <select class="form-control" name="is_aktif" id="is_aktif">
                             <option value="">--Pilih--</option>
                             <option value="yes">Yes</option>
                             <option value="no">No</option>
