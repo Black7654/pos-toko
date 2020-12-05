@@ -2,8 +2,8 @@
 -- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Dec 01, 2020 at 06:45 PM
+-- Host: 127.0.0.1
+-- Generation Time: Dec 05, 2020 at 03:51 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
 
@@ -630,14 +630,14 @@ CREATE TABLE `tb_kategori` (
   `idToko` varchar(35) NOT NULL,
   `idKat` varchar(35) NOT NULL,
   `nama` varchar(35) NOT NULL,
-  `aktif` enum('yes','no') NOT NULL
+  `is_aktif` enum('yes','no') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tb_kategori`
 --
 
-INSERT INTO `tb_kategori` (`id`, `idToko`, `idKat`, `nama`, `aktif`) VALUES
+INSERT INTO `tb_kategori` (`id`, `idToko`, `idKat`, `nama`, `is_aktif`) VALUES
 ('ID594677331', 'TOKO604692057824', 'KAT581368142930', 'Galuh', 'yes');
 
 -- --------------------------------------------------------
@@ -836,7 +836,8 @@ INSERT INTO `tb_toko` (`id`, `idToko`, `email`, `password`, `nama_toko`, `pemili
 (5, 'TKO213089390464', 'goblind03@gmail.com', '202cb962ac59075b964b07152d234b70', 'UD.JAYA', 'deny kurniawan', 'L', 'Kediri', '2000-12-15', '085732078030', 'Jalan.Setono Gg VI', '098787987', '3571', '35', '30112020124729_TKO213089390464.jpg', '2020-11-30', '2020-12-02', 'yes', 'yes', '2020-12-01'),
 (6, 'TKO692047012963', 'goblind04@gmail.com', '202cb962ac59075b964b07152d234b70', 'UD BUDI', 'Kurniawan', 'L', 'KEDIRI', '2000-12-15', '98789797', 'SETONO', '787986', '1101', '11', '30112020150324_TKO692047012963.jpg', '2020-11-30', '2020-12-07', 'yes', 'yes', '2020-11-30'),
 (7, '', 'galuhbernads@gmail.com', 'f7902bf75aa4f24d50490af095cd9b5e', 'Warkop Mewah', 'Galuh', 'L', 'Kediri', '2020-12-25', '081614648407', 'Kediri', '31412345678', 'ke', 'Ja', 'index.jpg', '2020-12-31', '2021-01-30', 'yes', NULL, NULL),
-(8, 'TKO618927105342', 'galuhbernads@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 'Warkop Mewah', 'Galuh', 'L', 'Kediri', '1999-12-25', '085736076368', 'Jl Perintis Kemerdekaan', '31412345678', '1116', '11', '01122020155126_TKO618927105342.jpeg', '2020-12-01', '2020-12-08', 'yes', NULL, NULL);
+(8, 'TKO618927105342', 'galuhbernads@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 'Warkop Mewah', 'Galuh', 'L', 'Kediri', '1999-12-25', '085736076368', 'Jl Perintis Kemerdekaan', '31412345678', '1116', '11', '01122020155126_TKO618927105342.jpeg', '2020-12-01', '2020-12-08', 'yes', NULL, NULL),
+(9, 'TKO841785514390', 'daneskun@gmail.com', 'c44a471bd78cc6c2fea32b9fe028d30a', 'Wawa cafe', 'Danes', 'P', 'Kediri', '2004-12-28', '13123213123213', 'a', '232423434324', '1101', '62', '05122020031934_TKO841785514390.jpg', '2020-12-05', '2020-12-12', 'yes', 'yes', '2020-12-05');
 
 -- --------------------------------------------------------
 
@@ -1030,7 +1031,7 @@ ALTER TABLE `tb_supplier`
 -- AUTO_INCREMENT for table `tb_toko`
 --
 ALTER TABLE `tb_toko`
-  MODIFY `id` bigint(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tb_user`

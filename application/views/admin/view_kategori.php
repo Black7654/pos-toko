@@ -1,5 +1,5 @@
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800"><span class="fas fa-fw fa-tags"></span>&nbspKategori</h1>
+    <!-- <h1 class="h3 mb-0 text-gray-800"><span class="fas fa-fw fa-tags"></span>&nbspKategori</h1> -->
 </div>
 
 <!-- ini tabel -->
@@ -26,7 +26,7 @@
                         <th class="text-center">ID Kategori</th>
                         <th class="text-center">Nama Kategori</th>
                         <th class="text-center">Aktif</th>
-                        <th class="text-center">Action</th>
+                        <th class="text-center">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -97,7 +97,7 @@
             </div>
             <div class="modal-footer">
                 <button type="submit" class="btn btn-success"><span class="fa fa-save"></span>&nbspSimpan</button>
-                <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="fa fa-times"></span>&nbspClose</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal"><span class="fa fa-times"></span>&nbspBatal</button>
             </div>
             </form>
         </div>
