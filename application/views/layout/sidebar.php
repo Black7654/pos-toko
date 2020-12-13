@@ -26,18 +26,18 @@
 
  <!-- Nav Item - Pages Collapse Menu -->
  <li class="nav-item">
-     <a class="nav-link" href="<?php echo base_url(); ?>admin">
+     <a class="nav-link" href="<?php echo base_url(); ?>toko">
          <i class="fas fa-fw fa-user-circle"></i>
-         <span>Admin</span></a>
+         <span>Toko</span></a>
  </li>
 
  
 
  <!-- Nilai -->
  <li class="nav-item">
-     <a class="nav-link" href="<?php echo base_url(); ?>siswa">
+     <a class="nav-link" href="<?php echo base_url(); ?>barang">
          <i class="fas fa-fw fa-users"></i>
-         <span>Siswa</span></a>
+         <span>Barang</span></a>
  </li>
 
  <!-- Pengaturan -->
