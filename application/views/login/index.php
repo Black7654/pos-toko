@@ -4,7 +4,7 @@
 <head>
 	<!-- Tittle Logo -->
 	<link rel="icon" type="img/svg" href="assets/img/tittle/shop.png">
-	<title>POS KITA</title>
+	<title>DPC HISPPI</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -16,7 +16,6 @@
  <!-- style.css -->
 <link type="text/css" rel="stylesheet" href="<?php echo base_url() . 'assets/'; ?>css/style.css">
 <link type="text/css" rel="stylesheet" href="<?php echo base_url() . 'assets/'; ?>css/sb-admin-2.css">
-<link type="text/css" rel="stylesheet" href="<?php echo base_url() . 'assets/'; ?>css/sb-admin-2.min.css">
 
 
 
@@ -24,13 +23,13 @@
 	<img class="wave" src="<?php echo base_url() . 'assets/'; ?>img/wave.png">
 	<div class="container">
 		<div class="img">
-			<img src="<?php echo base_url() . 'assets/'; ?>img/shop.svg">
+			<img src="<?php echo base_url() . 'assets/'; ?>img/draw.svg">
 		</div>
 		<div class="login-content">
 			<form action="<?php echo base_url(); ?>login/cek" enctype="multipart/form-data" method="POST">
 				<img src="<?php echo base_url() . 'assets/'; ?>img/avatar.svg">
 				<h4 class="head">SELAMAT DATANG DI APLIKASI</h4>
-				<h2 class="title">POS-KITA</h2>
+				<h2 class="title">DPC HISPPI</h2>
         <?php if ($this->session->flashdata('SUCCESS')) {?>
         <div class="alert alert-success alert-dismissible">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -63,7 +62,7 @@
            		    	<input type="password" name="password" class="input">
             	   </div>
 				</div>
-				<button type="submit" class="btn btn-success"><span class="fa fa-sign-in-alt"></span>&nbspLogin</button>
+				<button type="submit" class="btn btn-primary"><span class="fa fa-sign-in-alt"></span>&nbspLogin</button>
 				<hr>
 				<a class="text-center" href="<?php echo base_url(); ?>login/register"><h6>Belum Punya Akun? Klik Disini Untuk Daftar</h6></a>
 				
