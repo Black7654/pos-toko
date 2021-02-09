@@ -11,7 +11,7 @@
 
     <!-- Tittle Logo -->
     <link rel="icon" type="img/svg" href="assets/img/tittle/shop.png">
-    <title>DPC HISPPI</title>
+    <title>POS KITA</title>
 
     <!-- Custom fonts for this template-->
     <link href="<?php echo base_url() . 'assets/'; ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -34,7 +34,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion " id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion " id="accordionSidebar">
 
             <?php echo $_sidebar; ?>
 
@@ -68,7 +68,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>@Copyright&copy; by LPPK WAHANA TAMA INDONESIA </span>
+                        <span>@Copyright&copy; by CV.NMM All Right Reserved 2020</span>
                     </div>
                 </div>
             </footer>

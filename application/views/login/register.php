@@ -3,8 +3,8 @@
 
 <head>
     <!-- Tittle Logo -->
-    <link rel="icon" type="img/svg" href="assets/img/tittle/draw.png">
-    <title>DPC HISPPI</title>
+    <link rel="icon" type="img/svg" href="assets/img/tittle/shop.png">
+    <title>POS KITA</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -34,7 +34,7 @@
                         <div class="p-5">
 
                             <div class="text-center">
-                                <h2 class="title text-primary"><b><span class="fa fa-edit "></span>&nbspFORM REGISTRASI</b></h2>
+                                <h2 class="title text-success"><b><span class="fa fa-edit "></span>&nbspBUAT AKUN BARU</b></h2>
                                 <hr class="mr-auto">
                             </div>
 
@@ -45,41 +45,43 @@
                                 <div class="col-md">
                                     <input type="hidden" class="form-control" id="idtoko" name="idtoko" placeholder="Masukkan ID Toko Anda">
                                 </div>
-
                                 <div class="form-group mt-5">
                                     <div class="row">
-                                        <div class="col-md-12   ">
-                                            <label for="exampleInputName1">Nama Lengkap</label>
-                                            <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" placeholder="Masukkan Nama Lengkap Anda">
+                                        <div class="col-md-6">
+                                            <label for="exampleInputPassword1">E - Mail</label>
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan E-mail Anda">
                                         </div>
+
+                                        <div class="col-md-6">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan Password Anda">
+                                        </div>
+
                                     </div>
                                 </div>
-                                
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <label for="exampleInputAktif1">Jenis Kelamin</label>
-                                            <select class="form-control" name="gender" id="gender">
-                                                <option value="">--Pilih--</option>
-                                                <option value="L">Laki-Laki</option>
-                                                <option value="P">Perempuan</option>
-                                            </select>
+                                            <label for="exampleInputPassword1">Nama Toko</label>
+                                            <input type="text" class="form-control" id="nama_toko" name="nama_toko" placeholder="Masukkan Nama Toko Anda">
                                         </div>
 
                                         <div class="col-md-6">
-                                            <label for="exampleInputAktif1">Agama</label>
-                                            <select class="form-control" name="agama" id="agama">
-                                                <option value="">--Pilih--</option>
-                                                <option value="I">Islam</option>
-                                                <option value="K">Kristen</option>
-                                                <option value="H">Hindu</option>
-                                                <option value="B">Budha</option>
-                                                <option value="KH">Konghucu</option>
-                                            </select>
+                                            <label for="exampleInputPassword1">Nama Pemilik</label>
+                                            <input type="text" class="form-control" id="pemilik" name="pemilik" placeholder="Masukkan Nama Pemilik">
                                         </div>
                                     </div>
                                 </div>
-
+                                <div class="form-group">
+                                    <div class="col-md">
+                                        <label for="exampleInputAktif1">Jenis Kelamin</label>
+                                        <select class="form-control" name="gender" id="gender">
+                                            <option value="">--Pilih--</option>
+                                            <option value="L">Laki-Laki</option>
+                                            <option value="P">Perempuan</option>
+                                        </select>
+                                    </div>
+                                </div>
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-md-4">
@@ -93,33 +95,29 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md">
+                                            <label for="exampleInputPassword1">No Telephone</label>
+                                            <input type="text" class="form-control" id="telp" name="telp" placeholder="Masukkan No Telephone">
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="form-group">
                                     <div class="row">
                                         <div class="col-md">
                                             <label for="exampleInputPassword1">Alamat</label>
-                                            <textarea type="" class="form-control" id="alamat" name="alamat" placeholder="Masukkan Alamat Anda"></textarea>
+                                            <textarea type="" class="form-control" id="alamat" name="alamat" placeholder="Masukkan Alamat"></textarea>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="row">
-
                                         <div class="col-md-6">
-                                            <label for="exampleInputemail">E- Mail</label>
-                                            <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan Email Anda ">
+                                            <label for="exampleInputPassword1">NO KTP</label>
+                                            <input type="text" class="form-control" id="no_ktp" name="no_ktp" placeholder="Masukkan No KTP">
                                         </div>
 
-                                        <div class="col-md-6">
-                                            <label for="exampleInputPassword1">No Telephone</label>
-                                            <input type="text" class="form-control" id="telp" name="telp" placeholder="Masukkan No Telephone">
-                                        </div>
-                                    
-                                        
-                                    </div>
-                                </div>
-                                <!-- <div class="form-group">
-                                    <div class="row">
                                         <div class="col-md-6">
                                             <label for="exampleInputPassword1">Kota/Kab</label>
                                             <select class="form-control" name="kota_kab" id="e1">
@@ -130,43 +128,10 @@
                                             </select>
                                         </div>
                                     </div>
-                                </div> -->
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <label for="exampleInputPassword1">Nama Pendidik</label>
-                                            <input type="text" class="form-control" id="nama_pendidik" name="nama_pendidik" placeholder="Masukkan Nama Pendidik">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <label for="exampleInputPassword1">Nama Lembaga</label>
-                                            <input type="text" class="form-control" id="nama_lembaga" name="nama_lembaga" placeholder="Masukkan Nama Pendidik">
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="row">
-                                        <div class="col-md-12">
-                                        <label for="exampleInputPassword1">Alamat Lembaga</label>
-                                            <textarea type="" class="form-control" id="alamat_lembaga" name="alamat_lembaga" placeholder="Masukkan Alamat Lembaga"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <label for="exampleInputPassword1">Foto Profile</label>
-                                            <input type="file" class="form-control" name="foto_profil" id="foto_profil" accept="image/jpg, image/jpeg" placeholder="Upload Foto" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                 <!-- <div class="col-md-6">
+                                        <div class="col-md-6">
                                             <label for="exampleInputPassword1">Provinsi</label>
                                             <select class="form-control" name="provinsi" id="e1">
                                                 <option value="">--Pilih Provinsi--</option>
@@ -174,7 +139,14 @@
                                                     <option value="<?php echo $row->id_prov ?>"><?php echo $row->nama ?></option>
                                                 <?php endforeach; ?>
                                             </select>
-                                        </div> -->
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label for="exampleInputPassword1">Foto Profile</label>
+                                            <input type="file" class="form-control" name="foto_profil" id="foto_profil" accept="image/jpg, image/jpeg" placeholder="Upload Foto" required>
+                                        </div>
+                                    </div>
+                                </div>
                                 <!-- <div class="form-group">
                         <div class="row">
                             <div class="col-md-6">
@@ -188,7 +160,7 @@
                             </div>
                         </div>
                     </div> -->
-                                <button class="btn btn-primary btn-user btn-block" type="submit" id="simpan"><span class="fa fa-sign-in-alt"></span>&nbspDAFTAR SEKARANG</button>
+                                <button class="btn btn-success btn-user btn-block" type="submit" id="simpan"><span class="fa fa-sign-in-alt"></span>&nbspDAFTAR SEKARANG</button>
                             </form>
                             <hr>
                             <!-- <div class="text-center">
